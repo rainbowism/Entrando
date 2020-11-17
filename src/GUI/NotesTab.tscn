@@ -1,0 +1,158 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/GUI/NotesTab.gd" type="Script" id=1]
+[ext_resource path="res://assets/font/Ubuntu-16.tres" type="DynamicFont" id=2]
+
+[node name="NotesTab" type="HSplitContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemsMargin" type="MarginContainer" parent="."]
+margin_right = 740.0
+margin_bottom = 864.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 4
+custom_constants/margin_top = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 8
+
+[node name="Paths" type="VBoxContainer" parent="ItemsMargin"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 736.0
+margin_bottom = 856.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PathLabel" type="Label" parent="ItemsMargin/Paths"]
+margin_right = 728.0
+margin_bottom = 14.0
+text = "Check Paths:"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ItemsMargin/Paths"]
+margin_top = 18.0
+margin_right = 728.0
+margin_bottom = 848.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Items" type="VBoxContainer" parent="ItemsMargin/Paths/ScrollContainer"]
+margin_right = 728.0
+margin_bottom = 830.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NotesMargin" type="MarginContainer" parent="."]
+margin_left = 752.0
+margin_right = 1492.0
+margin_bottom = 864.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 8
+custom_constants/margin_top = 8
+custom_constants/margin_left = 4
+custom_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NotesMargin"]
+margin_left = 4.0
+margin_top = 8.0
+margin_right = 732.0
+margin_bottom = 856.0
+
+[node name="ChecksLabel" type="Label" parent="NotesMargin/VBoxContainer"]
+margin_right = 728.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+text = "Checks:"
+
+[node name="Current" type="HBoxContainer" parent="NotesMargin/VBoxContainer"]
+margin_top = 18.0
+margin_right = 728.0
+margin_bottom = 34.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="NotesMargin/VBoxContainer/Current"]
+margin_top = 1.0
+margin_right = 24.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 24, 0 )
+text = "0"
+
+[node name="Slider" type="HSlider" parent="NotesMargin/VBoxContainer/Current"]
+margin_left = 28.0
+margin_right = 728.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 40.0
+rounded = true
+tick_count = 40
+ticks_on_borders = true
+
+[node name="Total" type="HBoxContainer" parent="NotesMargin/VBoxContainer"]
+margin_top = 38.0
+margin_right = 728.0
+margin_bottom = 54.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="NotesMargin/VBoxContainer/Total"]
+margin_top = 1.0
+margin_right = 24.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 24, 0 )
+text = "0"
+
+[node name="Slider" type="HSlider" parent="NotesMargin/VBoxContainer/Total"]
+margin_left = 28.0
+margin_right = 728.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 40.0
+rounded = true
+tick_count = 40
+ticks_on_borders = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NotesMargin/VBoxContainer"]
+margin_top = 58.0
+margin_right = 728.0
+margin_bottom = 58.0
+
+[node name="NotesLabel" type="Label" parent="NotesMargin/VBoxContainer"]
+margin_top = 62.0
+margin_right = 728.0
+margin_bottom = 76.0
+text = "Notes:"
+
+[node name="NotesEdit" type="TextEdit" parent="NotesMargin/VBoxContainer"]
+margin_top = 80.0
+margin_right = 728.0
+margin_bottom = 848.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 2 )
+highlight_current_line = true
+show_line_numbers = true
+highlight_all_occurrences = true
+wrap_enabled = true
+caret_blink = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

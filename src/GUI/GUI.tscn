@@ -1,0 +1,910 @@
+[gd_scene load_steps=79 format=2]
+
+[ext_resource path="res://src/GUI/MarkerButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/GUI/GUI.gd" type="Script" id=2]
+[ext_resource path="res://assets/icons/connectors/spec-u.png" type="Texture" id=3]
+[ext_resource path="res://assets/icons/connectors/paradox-br.png" type="Texture" id=4]
+[ext_resource path="res://assets/icons/connectors/oldman-u.png" type="Texture" id=5]
+[ext_resource path="res://assets/icons/connectors/paradox-u.png" type="Texture" id=6]
+[ext_resource path="res://assets/icons/connectors/paradox-bl.png" type="Texture" id=7]
+[ext_resource path="res://assets/icons/connectors/spec-bl.png" type="Texture" id=8]
+[ext_resource path="res://assets/icons/connectors/spec-br.png" type="Texture" id=9]
+[ext_resource path="res://assets/icons/connectors/bunny-d.png" type="Texture" id=10]
+[ext_resource path="res://assets/icons/connectors/bunny-u.png" type="Texture" id=11]
+[ext_resource path="res://assets/icons/connectors/oldman-d.png" type="Texture" id=12]
+[ext_resource path="res://assets/icons/connectors/mountain_cave.png" type="Texture" id=13]
+[ext_resource path="res://assets/icons/connectors/mountain_cave_back.png" type="Texture" id=14]
+[ext_resource path="res://assets/icons/connectors/maiden.png" type="Texture" id=15]
+[ext_resource path="res://assets/icons/connectors/brother.png" type="Texture" id=16]
+[ext_resource path="res://assets/icons/connectors/granny.png" type="Texture" id=17]
+[ext_resource path="res://assets/icons/connectors/bumper-u.png" type="Texture" id=18]
+[ext_resource path="res://assets/icons/connectors/bumper-d.png" type="Texture" id=19]
+[ext_resource path="res://assets/icons/connectors/fairy_ascension.png" type="Texture" id=20]
+[ext_resource path="res://assets/icons/connectors/sick_kid.png" type="Texture" id=21]
+[ext_resource path="res://assets/icons/connectors/smith.png" type="Texture" id=22]
+[ext_resource path="res://assets/icons/connectors/potion_shop.png" type="Texture" id=23]
+[ext_resource path="res://assets/icons/connectors/sriracha.png" type="Texture" id=24]
+[ext_resource path="res://assets/icons/connectors/spiral-u.png" type="Texture" id=25]
+[ext_resource path="res://assets/icons/connectors/spiral-d.png" type="Texture" id=26]
+[ext_resource path="res://assets/icons/connectors/keese_cave.png" type="Texture" id=27]
+[ext_resource path="res://assets/icons/connectors/library.png" type="Texture" id=28]
+[ext_resource path="res://assets/icons/connectors/spike.png" type="Texture" id=29]
+[ext_resource path="res://assets/icons/dungeons/tr-u.png" type="Texture" id=30]
+[ext_resource path="res://assets/icons/dungeons/gt.png" type="Texture" id=31]
+[ext_resource path="res://assets/icons/dungeons/ganon.png" type="Texture" id=32]
+[ext_resource path="res://assets/icons/items/big_key.png" type="Texture" id=33]
+[ext_resource path="res://assets/icons/items/small_key.png" type="Texture" id=34]
+[ext_resource path="res://assets/icons/items/hammer.png" type="Texture" id=35]
+[ext_resource path="res://assets/icons/items/hookshot.png" type="Texture" id=36]
+[ext_resource path="res://assets/icons/items/fire_rod.png" type="Texture" id=37]
+[ext_resource path="res://assets/icons/items/ice_rod.png" type="Texture" id=38]
+[ext_resource path="res://assets/icons/items/lamp.png" type="Texture" id=39]
+[ext_resource path="res://assets/icons/items/flippers.png" type="Texture" id=40]
+[ext_resource path="res://assets/icons/items/byrna.png" type="Texture" id=41]
+[ext_resource path="res://assets/icons/items/somaria.png" type="Texture" id=42]
+[ext_resource path="res://assets/icons/items/powder.png" type="Texture" id=43]
+[ext_resource path="res://assets/icons/items/boots.png" type="Texture" id=44]
+[ext_resource path="res://assets/icons/items/bow.png" type="Texture" id=45]
+[ext_resource path="res://assets/icons/items/bombos.png" type="Texture" id=46]
+[ext_resource path="res://assets/icons/items/glove.png" type="Texture" id=47]
+[ext_resource path="res://assets/icons/items/mitt.png" type="Texture" id=48]
+[ext_resource path="res://assets/icons/dungeons/hc-l.png" type="Texture" id=49]
+[ext_resource path="res://assets/icons/dungeons/hc-d.png" type="Texture" id=50]
+[ext_resource path="res://assets/icons/dungeons/hc-r.png" type="Texture" id=51]
+[ext_resource path="res://assets/icons/dungeons/ep.png" type="Texture" id=52]
+[ext_resource path="res://assets/icons/dungeons/dp-l.png" type="Texture" id=53]
+[ext_resource path="res://assets/icons/dungeons/dp-d.png" type="Texture" id=54]
+[ext_resource path="res://assets/icons/dungeons/dp-r.png" type="Texture" id=55]
+[ext_resource path="res://assets/icons/dungeons/dp-u.png" type="Texture" id=56]
+[ext_resource path="res://assets/icons/dungeons/th.png" type="Texture" id=57]
+[ext_resource path="res://assets/icons/dungeons/at.png" type="Texture" id=58]
+[ext_resource path="res://assets/icons/dungeons/pd.png" type="Texture" id=59]
+[ext_resource path="res://assets/icons/dungeons/sp.png" type="Texture" id=60]
+[ext_resource path="res://assets/icons/dungeons/sw.png" type="Texture" id=61]
+[ext_resource path="res://assets/icons/dungeons/tt.png" type="Texture" id=62]
+[ext_resource path="res://assets/icons/dungeons/ip.png" type="Texture" id=63]
+[ext_resource path="res://assets/icons/dungeons/mm.png" type="Texture" id=64]
+[ext_resource path="res://assets/icons/dungeons/tr-l.png" type="Texture" id=65]
+[ext_resource path="res://assets/icons/dungeons/tr-d.png" type="Texture" id=66]
+[ext_resource path="res://assets/icons/dungeons/tr-r.png" type="Texture" id=67]
+[ext_resource path="res://assets/icons/dungeons/hc.png" type="Texture" id=68]
+[ext_resource path="res://assets/icons/notes.png" type="Texture" id=69]
+[ext_resource path="res://src/GUI/Map.gd" type="Script" id=70]
+[ext_resource path="res://assets/font/PressStart2P-12.tres" type="DynamicFont" id=71]
+[ext_resource path="res://assets/icons/gui/drag_and_drop.png" type="Texture" id=72]
+[ext_resource path="res://src/GUI/Notes.gd" type="Script" id=73]
+[ext_resource path="res://src/GUI/DragAndDrop.gd" type="Script" id=74]
+[ext_resource path="res://assets/icons/dungeons/tr.png" type="Texture" id=81]
+[ext_resource path="res://assets/icons/dungeons/dp.png" type="Texture" id=82]
+[ext_resource path="res://src/GUI/NotesButton.tscn" type="PackedScene" id=83]
+
+[sub_resource type="Theme" id=1]
+default_font = ExtResource( 71 )
+
+[node name="GUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+theme = SubResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Container" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Notes" type="Control" parent="Container"]
+margin_right = 1500.0
+margin_bottom = 754.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Shadow" type="ColorRect" parent="Container/Notes"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.0745098, 0.0745098, 0.0745098, 0.631373 )
+script = ExtResource( 73 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Container" type="MarginContainer" parent="Container/Notes/Shadow"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+custom_constants/margin_right = 400
+custom_constants/margin_top = 120
+custom_constants/margin_left = 400
+custom_constants/margin_bottom = 120
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BG" type="PanelContainer" parent="Container/Notes/Shadow/Container"]
+margin_left = 400.0
+margin_top = 120.0
+margin_right = 1100.0
+margin_bottom = 634.0
+
+[node name="Margin" type="MarginContainer" parent="Container"]
+margin_top = 758.0
+margin_right = 1500.0
+margin_bottom = 900.0
+size_flags_vertical = 8
+custom_constants/margin_right = 2
+custom_constants/margin_top = 2
+custom_constants/margin_left = 2
+custom_constants/margin_bottom = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Container/Margin"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 1498.0
+margin_bottom = 140.0
+
+[node name="Rows" type="VBoxContainer" parent="Container/Margin/HBoxContainer"]
+margin_right = 1496.0
+margin_bottom = 138.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 2
+
+[node name="1" type="HBoxContainer" parent="Container/Margin/HBoxContainer/Rows"]
+margin_right = 1496.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HCW" parent="Container/Margin/HBoxContainer/Rows/1" instance=ExtResource( 1 )]
+modulate = Color( 0.678431, 0.380392, 0.235294, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 44.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 49 )
+connector = "hc"
+
+[node name="HCS" parent="Container/Margin/HBoxContainer/Rows/1" instance=ExtResource( 1 )]
+modulate = Color( 0.678431, 0.380392, 0.235294, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 48.0
+margin_right = 92.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 50 )
+connector = "hc"
+
+[node name="HCE" parent="Container/Margin/HBoxContainer/Rows/1" instance=ExtResource( 1 )]
+modulate = Color( 0.678431, 0.380392, 0.235294, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 96.0
+margin_right = 140.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 51 )
+connector = "hc"
+
+[node name="EP" parent="Container/Margin/HBoxContainer/Rows/1" instance=ExtResource( 1 )]
+modulate = Color( 0.627451, 0.25098, 0.905882, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 144.0
+margin_right = 188.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 52 )
+connector = "ep"
+
+[node name="DPW" parent="Container/Margin/HBoxContainer/Rows/1" instance=ExtResource( 1 )]
+modulate = Color( 1, 0, 0, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 192.0
+margin_right = 236.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 53 )
+connector = "dp"
+
+[node name="DPS" parent="Container/Margin/HBoxContainer/Rows/1" instance=ExtResource( 1 )]
+modulate = Color( 1, 0, 0, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 240.0
+margin_right = 284.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 54 )
+connector = "dp"
+
+[node name="DPE" parent="Container/Margin/HBoxContainer/Rows/1" instance=ExtResource( 1 )]
+modulate = Color( 1, 0, 0, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 288.0
+margin_right = 332.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 55 )
+connector = "dp"
+
+[node name="DPN" parent="Container/Margin/HBoxContainer/Rows/1" instance=ExtResource( 1 )]
+modulate = Color( 1, 0, 0, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 336.0
+margin_right = 380.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 56 )
+connector = "dp"
+
+[node name="TH" parent="Container/Margin/HBoxContainer/Rows/1" instance=ExtResource( 1 )]
+modulate = Color( 1, 0.556863, 0.839216, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 384.0
+margin_right = 428.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 57 )
+connector = "th"
+
+[node name="AT" parent="Container/Margin/HBoxContainer/Rows/1" instance=ExtResource( 1 )]
+modulate = Color( 1, 0.647059, 0, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 432.0
+margin_right = 476.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 58 )
+connector = "at"
+
+[node name="PD" parent="Container/Margin/HBoxContainer/Rows/1" instance=ExtResource( 1 )]
+modulate = Color( 1, 1, 0, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 480.0
+margin_right = 524.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 59 )
+connector = "pd"
+
+[node name="SP" parent="Container/Margin/HBoxContainer/Rows/1" instance=ExtResource( 1 )]
+modulate = Color( 0.105882, 0.937255, 1, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 528.0
+margin_right = 572.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 60 )
+connector = "sp"
+
+[node name="SW" parent="Container/Margin/HBoxContainer/Rows/1" instance=ExtResource( 1 )]
+modulate = Color( 0.419608, 0.831373, 0.419608, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 576.0
+margin_right = 620.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 61 )
+connector = "sw"
+
+[node name="TT" parent="Container/Margin/HBoxContainer/Rows/1" instance=ExtResource( 1 )]
+modulate = Color( 1, 0, 1, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 624.0
+margin_right = 668.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 62 )
+connector = "tt"
+
+[node name="IP" parent="Container/Margin/HBoxContainer/Rows/1" instance=ExtResource( 1 )]
+modulate = Color( 0.392157, 0.65098, 0.929412, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 672.0
+margin_right = 716.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 63 )
+connector = "ip"
+
+[node name="MM" parent="Container/Margin/HBoxContainer/Rows/1" instance=ExtResource( 1 )]
+modulate = Color( 0, 1, 0, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 720.0
+margin_right = 764.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 64 )
+connector = "mm"
+
+[node name="TRW" parent="Container/Margin/HBoxContainer/Rows/1" instance=ExtResource( 1 )]
+modulate = Color( 1, 0.894118, 0.768627, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 768.0
+margin_right = 812.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 65 )
+connector = "tr"
+
+[node name="TRS" parent="Container/Margin/HBoxContainer/Rows/1" instance=ExtResource( 1 )]
+modulate = Color( 1, 0.894118, 0.768627, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 816.0
+margin_right = 860.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 66 )
+connector = "tr"
+
+[node name="TRE" parent="Container/Margin/HBoxContainer/Rows/1" instance=ExtResource( 1 )]
+modulate = Color( 1, 0.894118, 0.768627, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 864.0
+margin_right = 908.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 67 )
+connector = "tr"
+
+[node name="TRN" parent="Container/Margin/HBoxContainer/Rows/1" instance=ExtResource( 1 )]
+modulate = Color( 1, 0.894118, 0.768627, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 912.0
+margin_right = 956.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 30 )
+connector = "tr"
+
+[node name="GT" parent="Container/Margin/HBoxContainer/Rows/1" instance=ExtResource( 1 )]
+modulate = Color( 0.501961, 0, 0, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 960.0
+margin_right = 1004.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 31 )
+connector = "gt"
+
+[node name="Ganon" parent="Container/Margin/HBoxContainer/Rows/1" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1008.0
+margin_right = 1052.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 32 )
+connector = "ganon"
+
+[node name="2" type="HBoxContainer" parent="Container/Margin/HBoxContainer/Rows"]
+margin_top = 46.0
+margin_right = 1496.0
+margin_bottom = 91.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarkerButton14" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 44.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 35 )
+
+[node name="MarkerButton15" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 48.0
+margin_right = 92.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 37 )
+
+[node name="MarkerButton16" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 96.0
+margin_right = 140.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 39 )
+
+[node name="MarkerButton24" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 144.0
+margin_right = 188.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 42 )
+
+[node name="MarkerButton17" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 192.0
+margin_right = 236.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 43 )
+
+[node name="MarkerButton18" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 240.0
+margin_right = 284.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 45 )
+
+[node name="MarkerButton19" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 288.0
+margin_right = 332.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 47 )
+
+[node name="MarkerButton22" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 336.0
+margin_right = 380.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 34 )
+
+[node name="MarkerButton31" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 384.0
+margin_right = 428.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 15 )
+
+[node name="MarkerButton6" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 432.0
+margin_right = 476.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 13 )
+connector = "mountain"
+
+[node name="MarkerButton4" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 480.0
+margin_right = 524.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 5 )
+connector = "oldman"
+
+[node name="MarkerButton5" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 528.0
+margin_right = 572.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 11 )
+connector = "bunny"
+
+[node name="MarkerButton7" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 576.0
+margin_right = 620.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 18 )
+connector = "bumper"
+
+[node name="MarkerButton12" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 624.0
+margin_right = 668.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 25 )
+connector = "spiral"
+
+[node name="MarkerButton" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 672.0
+margin_right = 716.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 3 )
+connector = "spec"
+
+[node name="MarkerButton2" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 720.0
+margin_right = 764.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 8 )
+connector = "spec"
+
+[node name="MarkerButton3" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 768.0
+margin_right = 812.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 9 )
+connector = "spec"
+
+[node name="MarkerButton8" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 816.0
+margin_right = 860.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 16 )
+connector = "brother"
+
+[node name="MarkerButton9" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 864.0
+margin_right = 908.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 20 )
+connector = "fairy"
+
+[node name="MarkerButton10" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 912.0
+margin_right = 956.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 21 )
+connector = "sick_kid"
+
+[node name="MarkerButton11" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 960.0
+margin_right = 1004.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 23 )
+connector = "potion_shop"
+
+[node name="MarkerButton23" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1008.0
+margin_right = 1052.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 29 )
+connector = "spike"
+
+[node name="3" type="HBoxContainer" parent="Container/Margin/HBoxContainer/Rows"]
+margin_top = 93.0
+margin_right = 1496.0
+margin_bottom = 138.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarkerButton14" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 44.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 36 )
+
+[node name="MarkerButton15" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 48.0
+margin_right = 92.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 38 )
+
+[node name="MarkerButton16" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 96.0
+margin_right = 140.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 40 )
+
+[node name="MarkerButton17" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 144.0
+margin_right = 188.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 41 )
+
+[node name="MarkerButton18" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 192.0
+margin_right = 236.0
+margin_bottom = 45.0
+
+[node name="MarkerButton19" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 240.0
+margin_right = 284.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 46 )
+
+[node name="MarkerButton20" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 288.0
+margin_right = 332.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 48 )
+
+[node name="MarkerButton23" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 336.0
+margin_right = 380.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 33 )
+
+[node name="MarkerButton22" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 384.0
+margin_right = 428.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 44 )
+
+[node name="MarkerButton6" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 432.0
+margin_right = 476.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 14 )
+connector = "mountain"
+
+[node name="MarkerButton3" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 480.0
+margin_right = 524.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 12 )
+connector = "oldman"
+
+[node name="MarkerButton4" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 528.0
+margin_right = 572.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 10 )
+connector = "bunny"
+
+[node name="MarkerButton7" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 576.0
+margin_right = 620.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 19 )
+connector = "bumper"
+
+[node name="MarkerButton12" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 624.0
+margin_right = 668.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 26 )
+connector = "spiral"
+
+[node name="MarkerButton" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 672.0
+margin_right = 716.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 6 )
+connector = "paradox"
+
+[node name="MarkerButton5" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 720.0
+margin_right = 764.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 7 )
+connector = "paradox"
+
+[node name="MarkerButton2" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 768.0
+margin_right = 812.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 4 )
+connector = "paradox"
+
+[node name="MarkerButton8" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 816.0
+margin_right = 860.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 17 )
+connector = "granny"
+
+[node name="MarkerButton31" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 864.0
+margin_right = 908.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 27 )
+connector = "keese"
+
+[node name="MarkerButton10" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 912.0
+margin_right = 956.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 22 )
+connector = "smith"
+
+[node name="MarkerButton11" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 960.0
+margin_right = 1004.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 24 )
+connector = "sriracha"
+
+[node name="MarkerButton13" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1008.0
+margin_right = 1052.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 28 )
+connector = "library"
+
+[node name="Rows" type="VBoxContainer" parent="Container/Margin"]
+margin_left = 1170.0
+margin_top = 2.0
+margin_right = 1498.0
+margin_bottom = 140.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+custom_constants/separation = 3
+
+[node name="1" type="HBoxContainer" parent="Container/Margin/Rows"]
+margin_left = 16.0
+margin_right = 328.0
+margin_bottom = 44.0
+size_flags_horizontal = 8
+custom_constants/separation = 7
+
+[node name="Map" type="TextureRect" parent="Container/Margin/Rows/1"]
+margin_right = 44.0
+margin_bottom = 44.0
+texture = ExtResource( 69 )
+script = ExtResource( 70 )
+
+[node name="EP" parent="Container/Margin/Rows/1" instance=ExtResource( 83 )]
+modulate = Color( 0.627451, 0.25098, 0.905882, 1 )
+margin_left = 51.0
+margin_right = 111.0
+total_checks = 6
+icon = ExtResource( 52 )
+
+[node name="DP" parent="Container/Margin/Rows/1" instance=ExtResource( 83 )]
+modulate = Color( 1, 0, 0, 1 )
+margin_left = 118.0
+margin_right = 178.0
+total_checks = 6
+icon = ExtResource( 82 )
+
+[node name="TH" parent="Container/Margin/Rows/1" instance=ExtResource( 83 )]
+modulate = Color( 1, 0.556863, 0.839216, 1 )
+margin_left = 185.0
+margin_right = 245.0
+total_checks = 6
+icon = ExtResource( 57 )
+
+[node name="AT" parent="Container/Margin/Rows/1" instance=ExtResource( 83 )]
+modulate = Color( 1, 0.647059, 0, 1 )
+margin_left = 252.0
+margin_right = 312.0
+total_checks = 2
+icon = ExtResource( 58 )
+
+[node name="2" type="HBoxContainer" parent="Container/Margin/Rows"]
+margin_top = 47.0
+margin_right = 328.0
+margin_bottom = 91.0
+size_flags_horizontal = 8
+custom_constants/separation = 7
+
+[node name="DragAndDrop" type="TextureRect" parent="Container/Margin/Rows/2"]
+modulate = Color( 1, 1, 1, 0.235294 )
+margin_right = 60.0
+margin_bottom = 44.0
+texture = ExtResource( 72 )
+stretch_mode = 6
+script = ExtResource( 74 )
+
+[node name="PD" parent="Container/Margin/Rows/2" instance=ExtResource( 83 )]
+modulate = Color( 1, 1, 0, 1 )
+margin_left = 67.0
+margin_right = 127.0
+total_checks = 14
+icon = ExtResource( 59 )
+
+[node name="SP" parent="Container/Margin/Rows/2" instance=ExtResource( 83 )]
+modulate = Color( 0.105882, 0.937255, 1, 1 )
+margin_left = 134.0
+margin_right = 194.0
+total_checks = 10
+icon = ExtResource( 60 )
+
+[node name="SW" parent="Container/Margin/Rows/2" instance=ExtResource( 83 )]
+modulate = Color( 0.419608, 0.831373, 0.419608, 1 )
+margin_left = 201.0
+margin_right = 261.0
+total_checks = 8
+icon = ExtResource( 61 )
+
+[node name="TT" parent="Container/Margin/Rows/2" instance=ExtResource( 83 )]
+modulate = Color( 1, 0, 1, 1 )
+margin_left = 268.0
+margin_right = 328.0
+total_checks = 8
+icon = ExtResource( 62 )
+
+[node name="3" type="HBoxContainer" parent="Container/Margin/Rows"]
+margin_top = 94.0
+margin_right = 328.0
+margin_bottom = 138.0
+size_flags_horizontal = 8
+custom_constants/separation = 7
+
+[node name="HC" parent="Container/Margin/Rows/3" instance=ExtResource( 83 )]
+modulate = Color( 0.678431, 0.380392, 0.235294, 1 )
+total_checks = 8
+icon = ExtResource( 68 )
+
+[node name="IP" parent="Container/Margin/Rows/3" instance=ExtResource( 83 )]
+modulate = Color( 0.392157, 0.65098, 0.929412, 1 )
+margin_left = 67.0
+margin_right = 127.0
+total_checks = 8
+icon = ExtResource( 63 )
+
+[node name="MM" parent="Container/Margin/Rows/3" instance=ExtResource( 83 )]
+modulate = Color( 0, 1, 0, 1 )
+margin_left = 134.0
+margin_right = 194.0
+total_checks = 8
+icon = ExtResource( 64 )
+
+[node name="TR" parent="Container/Margin/Rows/3" instance=ExtResource( 83 )]
+modulate = Color( 1, 0.894118, 0.768627, 1 )
+margin_left = 201.0
+margin_right = 261.0
+total_checks = 12
+icon = ExtResource( 81 )
+
+[node name="GT" parent="Container/Margin/Rows/3" instance=ExtResource( 83 )]
+modulate = Color( 0.501961, 0, 0, 1 )
+margin_left = 268.0
+margin_right = 328.0
+total_checks = 27
+icon = ExtResource( 31 )
