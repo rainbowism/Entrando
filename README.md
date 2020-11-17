@@ -2,6 +2,8 @@
 
 A simple entrance randomizer tracker. There is no logic for tracking accessible entrances. Has some extra features for making criss-cross easier to track.
 
+You can download it [here](https://github.com/rainbowism/Entrando/releases), and the html5 version is available [here](https://rainbowism.com/entrando/).
+
 ## Usage
 
 * Map in the bottom right is an options menu.
