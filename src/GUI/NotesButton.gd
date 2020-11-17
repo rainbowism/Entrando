@@ -45,9 +45,10 @@ func set_total_checks(value: int) -> void:
 		update_label()
 
 func _current_checks_changed(value: int) -> void:
-	current_checks = value + 1
+	current_checks = value
 	if current_checks > total_checks:
 		current_checks = total_checks
+		notes_tab.current_slider.value = total_checks
 	if label:
 		update_label()
 

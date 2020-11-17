@@ -7,6 +7,10 @@ var total_slider: HSlider
 
 onready var item_container: VBoxContainer = $ItemsMargin/Paths/ScrollContainer/Items
 
+func _enter_tree() -> void:
+	total_label.text = "%d" % total_slider.value
+	current_label.text = "%d" % min(current_slider.value, total_slider.value)
+
 func attach_notes(parent: Node) -> void:
 	current_slider = $NotesMargin/VBoxContainer/Current/Slider
 	current_slider.value = parent.current_checks
