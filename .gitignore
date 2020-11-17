@@ -10,4 +10,5 @@ export_presets.cfg
 .mono/
 data_*/
 
+out/
 assets/unused/
