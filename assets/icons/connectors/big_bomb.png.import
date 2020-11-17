@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cape.png-f9444f969af03999771edb85ca6d7e79.stex"
+path="res://.import/big_bomb.png-9b320b350c4fd8bb7443cca36221fc6f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/items/cape.png"
-dest_files=[ "res://.import/cape.png-f9444f969af03999771edb85ca6d7e79.stex" ]
+source_file="res://assets/icons/connectors/big_bomb.png"
+dest_files=[ "res://.import/big_bomb.png-9b320b350c4fd8bb7443cca36221fc6f.stex" ]
 
 [params]
 

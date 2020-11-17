@@ -2,6 +2,8 @@ extends TextureButton
 
 export(String,
 	"",
+
+	# dungeons
 	"hc",
 	"ep",
 	"dp",
@@ -16,6 +18,8 @@ export(String,
 	"tr",
 	"gt",
 	"ganon",
+
+	# connectors
 	"spec",
 	"paradox",
 	"bunny",
@@ -32,8 +36,28 @@ export(String,
 	"spike",
 	"potion_shop",
 	"smith",
-	"library"
+	"big_bomb",
+	"library",
+
+	# items
+	"hammer",
+	"hookshot",
+	"lamp",
+	"fire_rod",
+	"ice_rod",
+	"somaria",
+	"byrna_cape",
+	"powder",
+	"bow",
+	"gloves",
+	"mitts",
+	"bombos",
+	"boots",
+	"flippers",
+	"key",
+	"big_key"
 ) var connector
+export(Color) var line_color: Color = Color.red
 var is_hovering: bool = false
 
 func _ready() -> void:
@@ -57,7 +81,7 @@ func _draw() -> void:
 		draw_line(
 			rect_size / 2,
 			node.global_position - rect_global_position,
-			Color.red,
+			line_color,
 			2, true
 		)
 
