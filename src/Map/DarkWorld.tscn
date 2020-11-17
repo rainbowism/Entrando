@@ -134,7 +134,7 @@ position = Vector2( 671, 577 )
 position = Vector2( 685, 577 )
 
 [node name="Icon14" parent="S" instance=ExtResource( 2 )]
-position = Vector2( 677, 588 )
+position = Vector2( 678, 591 )
 
 [node name="Icon15" parent="S" instance=ExtResource( 2 )]
 position = Vector2( 354, 488 )
@@ -160,10 +160,10 @@ position = Vector2( 601, 12 )
 position = Vector2( 706, 62 )
 
 [node name="Icon6" parent="DM" instance=ExtResource( 2 )]
-position = Vector2( 633, 109 )
+position = Vector2( 632, 109 )
 
 [node name="Icon7" parent="DM" instance=ExtResource( 2 )]
-position = Vector2( 642, 109 )
+position = Vector2( 645, 109 )
 
 [node name="Icon8" parent="DM" instance=ExtResource( 2 )]
 position = Vector2( 615, 86 )

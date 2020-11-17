@@ -4,9 +4,8 @@
 [ext_resource path="res://assets/item.png" type="Texture" id=2]
 [ext_resource path="res://assets/entrance.png" type="Texture" id=3]
 
-
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 4, 4 )
+extents = Vector2( 6, 6 )
 
 [node name="Icon" type="Area2D"]
 script = ExtResource( 1 )
@@ -18,6 +17,6 @@ texture = ExtResource( 3 )
 visible = false
 texture = ExtResource( 2 )
 
-[node name="Hitbx" type="CollisionShape2D" parent="."]
+[node name="Hitbox" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource( 1 )

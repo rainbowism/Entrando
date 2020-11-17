@@ -18,51 +18,39 @@ is_item = true
 
 [node name="Icon23" parent="NW" instance=ExtResource( 2 )]
 position = Vector2( 142, 98 )
-is_item = false
 
 [node name="Icon24" parent="NW" instance=ExtResource( 2 )]
 position = Vector2( 139, 10 )
-is_item = false
 
 [node name="Icon25" parent="NW" instance=ExtResource( 2 )]
 position = Vector2( 226, 56 )
-is_item = false
 
 [node name="Icon26" parent="NW" instance=ExtResource( 2 )]
 position = Vector2( 252, 46 )
-is_item = false
 
 [node name="Icon27" parent="NW" instance=ExtResource( 2 )]
 position = Vector2( 267, 133 )
-is_item = false
 
 [node name="Icon28" parent="NW" instance=ExtResource( 2 )]
 position = Vector2( 270, 115 )
-is_item = false
 
 [node name="Icon" parent="NW" instance=ExtResource( 2 )]
 position = Vector2( 141, 242 )
-is_item = false
 
 [node name="Icon2" parent="NW" instance=ExtResource( 2 )]
 position = Vector2( 97, 315 )
-is_item = false
 
 [node name="Icon3" parent="NW" instance=ExtResource( 2 )]
-position = Vector2( 115, 316 )
-is_item = false
+position = Vector2( 114, 316 )
 
 [node name="Icon4" parent="NW" instance=ExtResource( 2 )]
-position = Vector2( 126, 316 )
-is_item = false
+position = Vector2( 128, 316 )
 
 [node name="Icon5" parent="NW" instance=ExtResource( 2 )]
 position = Vector2( 18, 319 )
-is_item = false
 
 [node name="Icon6" parent="NW" instance=ExtResource( 2 )]
 position = Vector2( 38, 350 )
-is_item = false
 
 [node name="Icon7" parent="NW" instance=ExtResource( 2 )]
 position = Vector2( 72, 349 )
@@ -70,11 +58,9 @@ is_item = true
 
 [node name="Icon8" parent="NW" instance=ExtResource( 2 )]
 position = Vector2( 156, 362 )
-is_item = false
 
 [node name="Icon9" parent="NW" instance=ExtResource( 2 )]
 position = Vector2( 117, 403 )
-is_item = false
 
 [node name="Icon10" parent="NW" instance=ExtResource( 2 )]
 position = Vector2( 120, 424 )
@@ -82,31 +68,24 @@ is_item = true
 
 [node name="Icon11" parent="NW" instance=ExtResource( 2 )]
 position = Vector2( 120, 447 )
-is_item = false
 
 [node name="Icon12" parent="NW" instance=ExtResource( 2 )]
 position = Vector2( 82, 438 )
-is_item = false
 
 [node name="Icon13" parent="NW" instance=ExtResource( 2 )]
 position = Vector2( 73, 405 )
-is_item = false
 
 [node name="Icon14" parent="NW" instance=ExtResource( 2 )]
 position = Vector2( 21, 446 )
-is_item = false
 
 [node name="Icon15" parent="NW" instance=ExtResource( 2 )]
 position = Vector2( 153, 400 )
-is_item = false
 
 [node name="Icon16" parent="NW" instance=ExtResource( 2 )]
 position = Vector2( 243, 420 )
-is_item = false
 
 [node name="Icon17" parent="NW" instance=ExtResource( 2 )]
 position = Vector2( 229, 401 )
-is_item = false
 
 [node name="Icon18" parent="NW" instance=ExtResource( 2 )]
 position = Vector2( 22.9464, 524.281 )
@@ -114,93 +93,73 @@ is_item = true
 
 [node name="Icon19" parent="NW" instance=ExtResource( 2 )]
 position = Vector2( 81.8121, 540.038 )
-is_item = false
 
 [node name="Icon20" parent="NW" instance=ExtResource( 2 )]
 position = Vector2( 105.596, 540.038 )
-is_item = false
 
 [node name="Icon21" parent="NW" instance=ExtResource( 2 )]
 position = Vector2( 117.191, 495.443 )
-is_item = false
 
 [node name="Icon29" parent="NW" instance=ExtResource( 2 )]
 position = Vector2( 161.192, 528.443 )
-is_item = false
 
 [node name="NE" type="Node2D" parent="."]
 
 [node name="Icon" parent="NE" instance=ExtResource( 2 )]
 position = Vector2( 293, 220 )
-is_item = false
 
 [node name="Icon2" parent="NE" instance=ExtResource( 2 )]
 position = Vector2( 390, 220 )
-is_item = false
 
 [node name="Icon3" parent="NE" instance=ExtResource( 2 )]
 position = Vector2( 428, 206 )
-is_item = false
 
 [node name="Icon4" parent="NE" instance=ExtResource( 2 )]
 position = Vector2( 451, 222 )
-is_item = false
 
 [node name="Icon5" parent="NE" instance=ExtResource( 2 )]
 position = Vector2( 482, 233 )
-is_item = false
 
 [node name="Icon6" parent="NE" instance=ExtResource( 2 )]
 position = Vector2( 601, 252 )
-is_item = false
 
 [node name="Icon7" parent="NE" instance=ExtResource( 2 )]
 position = Vector2( 675.582, 107.127 )
-is_item = false
 
 [node name="Icon8" parent="NE" instance=ExtResource( 2 )]
 position = Vector2( 730.737, 100.056 )
 is_item = true
 
 [node name="Icon9" parent="NE" instance=ExtResource( 2 )]
-position = Vector2( 718.009, 100.056 )
+position = Vector2( 717.009, 100.056 )
 is_item = true
 
 [node name="Icon10" parent="NE" instance=ExtResource( 2 )]
 position = Vector2( 337, 292 )
-is_item = false
 
 [node name="Icon11" parent="NE" instance=ExtResource( 2 )]
 position = Vector2( 375, 301 )
-is_item = false
 
 [node name="Icon12" parent="NE" instance=ExtResource( 2 )]
 position = Vector2( 413, 292 )
-is_item = false
 
 [node name="Icon13" parent="NE" instance=ExtResource( 2 )]
 position = Vector2( 375, 331 )
-is_item = false
 
 [node name="Icon14" parent="NE" instance=ExtResource( 2 )]
 position = Vector2( 446.48, 311.481 )
-is_item = false
 
 [node name="Icon15" parent="NE" instance=ExtResource( 2 )]
 position = Vector2( 608, 340 )
-is_item = false
 
 [node name="Icon16" parent="NE" instance=ExtResource( 2 )]
 position = Vector2( 719, 292 )
-is_item = false
 
 [node name="Icon17" parent="NE" instance=ExtResource( 2 )]
 position = Vector2( 618, 484 )
-is_item = false
 
 [node name="Icon18" parent="NE" instance=ExtResource( 2 )]
 position = Vector2( 735, 526 )
-is_item = false
 
 [node name="Icon19" parent="NE" instance=ExtResource( 2 )]
 position = Vector2( 216, 497 )
@@ -210,23 +169,18 @@ is_item = true
 
 [node name="Icon" parent="S" instance=ExtResource( 2 )]
 position = Vector2( 26, 596 )
-is_item = false
 
 [node name="Icon2" parent="S" instance=ExtResource( 2 )]
 position = Vector2( 56, 597 )
-is_item = false
 
 [node name="Icon3" parent="S" instance=ExtResource( 2 )]
 position = Vector2( 56, 575 )
-is_item = false
 
 [node name="Icon4" parent="S" instance=ExtResource( 2 )]
 position = Vector2( 85, 597 )
-is_item = false
 
 [node name="Icon5" parent="S" instance=ExtResource( 2 )]
 position = Vector2( 132, 583 )
-is_item = false
 
 [node name="Icon6" parent="S" instance=ExtResource( 2 )]
 position = Vector2( 18, 686 )
@@ -234,15 +188,12 @@ is_item = true
 
 [node name="Icon7" parent="S" instance=ExtResource( 2 )]
 position = Vector2( 149, 620 )
-is_item = false
 
 [node name="Icon8" parent="S" instance=ExtResource( 2 )]
 position = Vector2( 208, 669 )
-is_item = false
 
 [node name="Icon9" parent="S" instance=ExtResource( 2 )]
 position = Vector2( 234, 718 )
-is_item = false
 
 [node name="Icon10" parent="S" instance=ExtResource( 2 )]
 position = Vector2( 338, 698 )
@@ -250,19 +201,15 @@ is_item = true
 
 [node name="Icon11" parent="S" instance=ExtResource( 2 )]
 position = Vector2( 352, 702 )
-is_item = false
 
 [node name="Icon12" parent="S" instance=ExtResource( 2 )]
 position = Vector2( 448, 584 )
-is_item = false
 
 [node name="Icon13" parent="S" instance=ExtResource( 2 )]
 position = Vector2( 490, 705 )
-is_item = false
 
 [node name="Icon14" parent="S" instance=ExtResource( 2 )]
 position = Vector2( 594, 640 )
-is_item = false
 
 [node name="Icon15" parent="S" instance=ExtResource( 2 )]
 position = Vector2( 547, 621 )
@@ -274,23 +221,18 @@ is_item = true
 
 [node name="Icon17" parent="S" instance=ExtResource( 2 )]
 position = Vector2( 486, 603 )
-is_item = false
 
 [node name="Icon18" parent="S" instance=ExtResource( 2 )]
 position = Vector2( 545, 575 )
-is_item = false
 
 [node name="Icon19" parent="S" instance=ExtResource( 2 )]
 position = Vector2( 671, 578 )
-is_item = false
 
 [node name="Icon20" parent="S" instance=ExtResource( 2 )]
-position = Vector2( 677, 589 )
-is_item = false
+position = Vector2( 679, 592 )
 
 [node name="Icon21" parent="S" instance=ExtResource( 2 )]
 position = Vector2( 686, 578 )
-is_item = false
 
 [node name="Icon22" parent="S" instance=ExtResource( 2 )]
 position = Vector2( 165, 690 )
@@ -298,41 +240,32 @@ is_item = true
 
 [node name="Icon23" parent="S" instance=ExtResource( 2 )]
 position = Vector2( 355, 490 )
-is_item = false
 
 [node name="Icon24" parent="S" instance=ExtResource( 2 )]
 position = Vector2( 199, 620 )
-is_item = false
 
 [node name="WDM" type="Node2D" parent="."]
 
 [node name="Icon" parent="WDM" instance=ExtResource( 2 )]
 position = Vector2( 305, 142 )
-is_item = false
 
 [node name="Icon2" parent="WDM" instance=ExtResource( 2 )]
 position = Vector2( 337, 176 )
-is_item = false
 
 [node name="Icon3" parent="WDM" instance=ExtResource( 2 )]
 position = Vector2( 342, 104 )
-is_item = false
 
 [node name="Icon4" parent="WDM" instance=ExtResource( 2 )]
 position = Vector2( 367, 110 )
-is_item = false
 
 [node name="Icon5" parent="WDM" instance=ExtResource( 2 )]
 position = Vector2( 296, 103 )
-is_item = false
 
 [node name="Icon6" parent="WDM" instance=ExtResource( 2 )]
 position = Vector2( 402, 122 )
-is_item = false
 
 [node name="Icon7" parent="WDM" instance=ExtResource( 2 )]
 position = Vector2( 366, 77 )
-is_item = false
 
 [node name="Icon8" parent="WDM" instance=ExtResource( 2 )]
 position = Vector2( 380, 66 )
@@ -344,45 +277,35 @@ is_item = true
 
 [node name="Icon10" parent="WDM" instance=ExtResource( 2 )]
 position = Vector2( 420, 24 )
-is_item = false
 
 [node name="EDM" type="Node2D" parent="."]
 
 [node name="Icon" parent="EDM" instance=ExtResource( 2 )]
 position = Vector2( 601, 98 )
-is_item = false
 
 [node name="Icon2" parent="EDM" instance=ExtResource( 2 )]
 position = Vector2( 616, 103 )
-is_item = false
 
 [node name="Icon3" parent="EDM" instance=ExtResource( 2 )]
-position = Vector2( 633, 109 )
-is_item = false
+position = Vector2( 631, 109 )
 
 [node name="Icon4" parent="EDM" instance=ExtResource( 2 )]
-position = Vector2( 642, 109 )
-is_item = false
+position = Vector2( 645, 109 )
 
 [node name="Icon5" parent="EDM" instance=ExtResource( 2 )]
 position = Vector2( 647, 163 )
-is_item = false
 
 [node name="Icon6" parent="EDM" instance=ExtResource( 2 )]
 position = Vector2( 616, 85 )
-is_item = false
 
 [node name="Icon7" parent="EDM" instance=ExtResource( 2 )]
 position = Vector2( 598, 69 )
-is_item = false
 
 [node name="Icon8" parent="EDM" instance=ExtResource( 2 )]
 position = Vector2( 632, 67 )
-is_item = false
 
 [node name="Icon9" parent="EDM" instance=ExtResource( 2 )]
 position = Vector2( 645, 48 )
-is_item = false
 
 [node name="Icon10" parent="EDM" instance=ExtResource( 2 )]
 position = Vector2( 609, 14 )
