@@ -7,6 +7,7 @@ var andy_mode: bool = false
 # enables drag and dropping markers
 var drag_and_drop: bool = false
 var nodes_hidden: Array = []
+var last_marker
 
 func _ready() -> void:
 	Events.connect("mode_changed", self, "_on_mode_changed")

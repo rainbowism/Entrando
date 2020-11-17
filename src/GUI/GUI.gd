@@ -3,7 +3,7 @@ extends Control
 enum {
 	MENU_OW_ITEMS = 0,
 	MENU_DRAG_N_DROP = 1,
-	MENU_RESET = 100
+	MENU_RESET = 3
 }
 
 onready var marker_scene: PackedScene = preload("res://src/Objects/Marker.tscn")
@@ -25,6 +25,9 @@ func generate_marker(texture: Texture, color: Color, connector: String) -> void:
 	if Util.mode != Util.MODE_OW:
 		return
 
+	if Util.last_marker and Util.last_marker.is_following:
+		Util.last_marker.queue_free()
+
 	var marker = marker_scene.instance()
 	marker.modulate = color
 	marker.set_sprite(texture)
@@ -32,6 +35,7 @@ func generate_marker(texture: Texture, color: Color, connector: String) -> void:
 		marker.add_to_group(connector)
 		marker.connector = connector
 		marker.is_connecter = true
+	Util.last_marker = marker
 	owner.add_child(marker)
 
 func open_notes(node: Node) -> void:

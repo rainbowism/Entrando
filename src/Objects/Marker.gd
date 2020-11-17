@@ -45,6 +45,8 @@ func _input(event: InputEvent) -> void:
 		and event.button_index == BUTTON_LEFT \
 		and !event.is_pressed():
 			is_following = false
+			if global_position.y > 750:
+				queue_free()
 
 func _input_event(_viewport: Object, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton:
