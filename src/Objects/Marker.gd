@@ -8,6 +8,7 @@ var is_hovering: bool = false
 func _ready() -> void:
 	connect("mouse_entered", self, "_on_mouse_entered")
 	connect("mouse_exited", self, "_on_mouse_exited")
+	add_to_group("marker")
 
 func _process(_delta: float) -> void:
 	if is_following:

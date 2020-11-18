@@ -3,7 +3,8 @@ extends Control
 enum {
 	MENU_OW_ITEMS = 0,
 	MENU_DRAG_N_DROP = 1,
-	MENU_RESET = 3
+	MENU_REMAINING_ENTRANCES = 2,
+	MENU_RESET = 4
 }
 
 onready var marker_scene: PackedScene = preload("res://src/Objects/Marker.tscn")
@@ -18,6 +19,7 @@ func _ready() -> void:
 
 	menu.add_item("Hide OW Item Markers", MENU_OW_ITEMS)
 	menu.add_check_item("Drag n' Drop Markers", MENU_DRAG_N_DROP)
+	menu.add_check_item("Show Remaining Entrances", MENU_REMAINING_ENTRANCES)
 	menu.add_separator()
 	menu.add_item("!!RESET!!", MENU_RESET)
 
@@ -56,5 +58,7 @@ func menu_pressed(id: int) -> void:
 			get_tree().call_group("item", "queue_free")
 		MENU_DRAG_N_DROP:
 			Util.drag_and_drop = menu.is_item_checked(id)
+		MENU_REMAINING_ENTRANCES:
+			$"Container/Margin/Rows/2/EntranceCounter".visible = menu.is_item_checked(id)
 		MENU_RESET:
 			get_tree().reload_current_scene()

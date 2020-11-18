@@ -18,6 +18,7 @@ func _input(event: InputEvent) -> void:
 		var node = nodes_hidden[len(nodes_hidden) - 1]
 		node.show()
 		nodes_hidden.erase(node)
+		Events.emit_signal("entrances_changed", 1)
 
 func add_hidden(node: Node) -> void:
 	nodes_hidden.append(node)
@@ -25,6 +26,7 @@ func add_hidden(node: Node) -> void:
 		var to_delete = nodes_hidden[0]
 		nodes_hidden.erase(to_delete)
 		to_delete.queue_free()
+	Events.emit_signal("entrances_changed", -1)
 
 func _on_mode_changed(new_mode: int) -> void:
 	mode = new_mode

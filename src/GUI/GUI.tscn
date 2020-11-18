@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=2]
+[gd_scene load_steps=79 format=2]
 
 [ext_resource path="res://src/GUI/MarkerButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/GUI/GUI.gd" type="Script" id=2]
@@ -71,6 +71,7 @@
 [ext_resource path="res://assets/icons/notes.png" type="Texture" id=69]
 [ext_resource path="res://src/GUI/Map.gd" type="Script" id=70]
 [ext_resource path="res://assets/font/PressStart2P-12.tres" type="DynamicFont" id=71]
+[ext_resource path="res://src/GUI/EntranceCounter.gd" type="Script" id=72]
 [ext_resource path="res://src/GUI/Notes.gd" type="Script" id=73]
 [ext_resource path="res://assets/icons/items/byrna_cape.png" type="Texture" id=75]
 [ext_resource path="res://assets/icons/dungeons/tr.png" type="Texture" id=81]
@@ -871,6 +872,12 @@ margin_right = 328.0
 margin_bottom = 91.0
 size_flags_horizontal = 8
 custom_constants/separation = 7
+
+[node name="EntranceCounter" type="Label" parent="Container/Margin/Rows/2"]
+visible = false
+margin_top = 16.0
+margin_bottom = 28.0
+script = ExtResource( 72 )
 
 [node name="PD" parent="Container/Margin/Rows/2" instance=ExtResource( 83 )]
 modulate = Color( 1, 1, 0, 1 )
