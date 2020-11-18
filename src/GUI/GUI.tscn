@@ -564,6 +564,7 @@ margin_left = 768.0
 margin_right = 812.0
 margin_bottom = 45.0
 texture_normal = ExtResource( 15 )
+connector = "sanctuary"
 
 [node name="Brother" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
 anchor_right = 0.0
