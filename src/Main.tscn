@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/Map/LightWorld.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/GUI/GUI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Main.gd" type="Script" id=3]
 [ext_resource path="res://src/Map/DarkWorld.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Map/Markers.gd" type="Script" id=5]
 
 [node name="Tracker" type="Node"]
 script = ExtResource( 3 )
@@ -12,6 +13,10 @@ script = ExtResource( 3 )
 
 [node name="DarkWorld" parent="." instance=ExtResource( 4 )]
 position = Vector2( 750, 0 )
+
+[node name="Markers" type="Node2D" parent="."]
+position = Vector2( 750, 0 )
+script = ExtResource( 5 )
 
 [node name="GUILayer" type="CanvasLayer" parent="."]
 

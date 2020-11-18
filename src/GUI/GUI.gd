@@ -7,13 +7,11 @@ enum {
 	MENU_RESET = 4
 }
 
-onready var marker_scene: PackedScene = preload("res://src/Objects/Marker.tscn")
 onready var menu = $PopupMenu
 onready var notes_modal = $Container/Notes/Shadow
 onready var notes_container = $Container/Notes/Shadow/Container/BG
 
 func _ready() -> void:
-	Events.connect("marker_clicked", self, "generate_marker")
 	Events.connect("notes_clicked", self, "open_notes")
 	menu.connect("id_pressed", self, "menu_pressed")
 
@@ -22,23 +20,6 @@ func _ready() -> void:
 	menu.add_check_item("Show Remaining Entrances", MENU_REMAINING_ENTRANCES)
 	menu.add_separator()
 	menu.add_item("!!RESET!!", MENU_RESET)
-
-func generate_marker(texture: Texture, color: Color, connector: String) -> void:
-	if Util.mode != Util.MODE_OW:
-		return
-
-	if Util.last_marker and Util.last_marker.is_following:
-		Util.last_marker.queue_free()
-
-	var marker = marker_scene.instance()
-	marker.modulate = color
-	marker.set_sprite(texture)
-	if connector != "":
-		marker.add_to_group(connector)
-		marker.connector = connector
-		marker.is_connecter = true
-	Util.last_marker = marker
-	owner.add_child(marker)
 
 func open_notes(node: Node) -> void:
 	for child in notes_container.get_children():
