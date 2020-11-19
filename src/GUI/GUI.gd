@@ -1,17 +1,19 @@
 extends Control
 
 enum {
-	MENU_OW_ITEMS = 0,
-	MENU_DRAG_N_DROP = 1,
-	MENU_REMAINING_ENTRANCES = 2,
-	# 3 separator
-	MENU_SAVE_FILE = 4,
-	MENU_LOAD_FILE = 5,
-	# 6 separator
-	MENU_RESET = 7
+	MENU_RESET = 0,
+	# 1 separator
+	MENU_SAVE_FILE = 2,
+	MENU_LOAD_FILE = 3,
+	# 4 separator
+	MENU_REMAINING_ENTRANCES = 5,
+	MENU_DRAG_N_DROP = 6,
+	MENU_OW_ITEMS = 7
 }
 
 onready var menu = $PopupMenu
+onready var tooltip = $TooltipPopup
+onready var tooltip_timer = $TooltipPopup/Timer
 onready var notes_modal = $Container/Notes/Shadow
 onready var notes_container = $Container/Notes/Shadow/Container/BG
 
@@ -19,14 +21,19 @@ func _ready() -> void:
 	Events.connect("notes_clicked", self, "open_notes")
 	menu.connect("id_pressed", self, "menu_pressed")
 
-	menu.add_item("Hide OW Item Markers", MENU_OW_ITEMS)
-	menu.add_check_item("Drag n' Drop Markers", MENU_DRAG_N_DROP)
-	menu.add_check_item("Show Remaining Entrances", MENU_REMAINING_ENTRANCES)
+	menu.add_item("!!RESET!!", MENU_RESET)
 	menu.add_separator()
 	menu.add_item("Save", MENU_SAVE_FILE)
 	menu.add_item("Load", MENU_LOAD_FILE)
 	menu.add_separator()
-	menu.add_item("!!RESET!!", MENU_RESET)
+	menu.add_check_item("Show Remaining Entrances", MENU_REMAINING_ENTRANCES)
+	menu.add_check_item("Drag n' Drop Markers", MENU_DRAG_N_DROP)
+	menu.add_item("Hide OW Item Markers", MENU_OW_ITEMS)
+
+	for child in get_tree().get_nodes_in_group(Util.GROUP_NOTES):
+		print(child.name)
+		child.connect("mouse_entered", self, "_on_notes_entered", [child])
+		child.connect("mouse_exited", self, "_on_notes_exited")
 
 func save_data() -> Dictionary:
 	var data = {}
@@ -67,3 +74,18 @@ func menu_pressed(id: int) -> void:
 			Events.emit_signal("load_file_clicked")
 		MENU_RESET:
 			get_tree().reload_current_scene()
+
+func _on_notes_entered(node: Node) -> void:
+	print("hello")
+	for item in node.notes_tab.item_container.get_children():
+		var sprite = TextureRect.new()
+		sprite.texture = item.icons.get_child(0).texture
+		tooltip.add_child(sprite)
+	tooltip.popup()
+	tooltip.rect_global_position = get_global_mouse_position() - tooltip.rect_size
+
+func _on_notes_exited() -> void:
+	print("hello")
+	tooltip.hide()
+	for child in tooltip.get_children():
+		child.queue_free()
