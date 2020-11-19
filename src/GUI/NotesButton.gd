@@ -21,14 +21,24 @@ func _ready() -> void:
 func _gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton \
 		and event.is_pressed():
-		if event.button_index == BUTTON_LEFT:
-			Events.emit_signal("mode_changed", Util.MODE_DUNGEON)
-			Events.emit_signal("notes_clicked", notes_tab)
-		elif event.button_index == BUTTON_RIGHT:
-			current_checks = current_checks + 1
-			if current_checks > total_checks:
-				current_checks = total_checks
-			set_current_checks(current_checks)
+		match(event.button_index):
+			BUTTON_LEFT:
+				Events.emit_signal("mode_changed", Util.MODE_DUNGEON)
+				Events.emit_signal("notes_clicked", notes_tab)
+			BUTTON_RIGHT:
+				current_checks += 1
+				if current_checks > total_checks:
+					current_checks = total_checks
+				set_current_checks(current_checks)
+			BUTTON_WHEEL_UP:
+				total_checks += 1
+				set_total_checks(total_checks)
+			BUTTON_WHEEL_DOWN:
+				total_checks -= 1
+				set_total_checks(total_checks)
+				if current_checks > total_checks:
+					current_checks = total_checks
+				set_current_checks(current_checks)
 
 func save_data() -> Dictionary:
 	var data = {
