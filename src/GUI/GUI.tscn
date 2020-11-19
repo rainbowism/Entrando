@@ -986,7 +986,6 @@ __meta__ = {
 }
 
 [node name="TooltipPopup" type="PopupPanel" parent="."]
-visible = true
 margin_right = 8.0
 margin_bottom = 8.0
 mouse_filter = 2

@@ -12,6 +12,7 @@ func init() -> void:
 	sprite = $Sprite
 
 func _ready() -> void:
+	init()
 	connect("mouse_entered", self, "_on_mouse_entered")
 	connect("mouse_exited", self, "_on_mouse_exited")
 	add_to_group(Util.GROUP_MARKER)
