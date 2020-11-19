@@ -84,8 +84,7 @@ access = 2
 filters = PoolStringArray( "*.json ; JSON Save" )
 show_hidden_files = true
 current_dir = "/"
-current_file = "."
-current_path = "/."
+current_path = "/"
 __meta__ = {
 "_edit_use_anchors_": false
 }
