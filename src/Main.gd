@@ -37,14 +37,14 @@ func open_save_dialog() -> void:
 	$GUILayer/FileDialog.show()
 	$GUILayer/FileDialog/Dialog.mode = FileDialog.MODE_SAVE_FILE
 	var date = OS.get_datetime()
-	$GUILayer/FileDialog/Dialog.current_path = OS.get_executable_path().get_base_dir()
+	$GUILayer/FileDialog/Dialog.current_path = OS.get_executable_path()
 	$GUILayer/FileDialog/Dialog.current_file = "%d-%d-%d.json" % [date.year, date.month, date.day]
 	$GUILayer/FileDialog/Dialog.popup()
 
 func open_load_dialog() -> void:
 	$GUILayer/FileDialog.show()
 	$GUILayer/FileDialog/Dialog.mode = FileDialog.MODE_OPEN_FILE
-	$GUILayer/FileDialog/Dialog.current_path = OS.get_executable_path().get_base_dir()
+	$GUILayer/FileDialog/Dialog.current_path = OS.get_executable_path()
 	$GUILayer/FileDialog/Dialog.current_file = ""
 	$GUILayer/FileDialog/Dialog.popup()
 
