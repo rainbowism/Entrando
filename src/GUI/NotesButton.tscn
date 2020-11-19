@@ -36,4 +36,3 @@ valign = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="gui_input" from="Texture" to="." method="_gui_input"]
