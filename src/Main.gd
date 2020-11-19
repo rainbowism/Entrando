@@ -53,7 +53,8 @@ func _on_file_selected(path: String) -> void:
 		FileDialog.MODE_SAVE_FILE:
 			save_data(path)
 		FileDialog.MODE_OPEN_FILE:
-			load_data(path)
+			if load_data(path):
+				Events.emit_signal("tracker_restarted")
 
 func save_data(path: String) -> bool:
 	var data = {

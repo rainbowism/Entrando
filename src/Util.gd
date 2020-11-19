@@ -16,6 +16,7 @@ var nodes_hidden: Array = []
 var last_marker
 
 func _ready() -> void:
+	Events.connect("tracker_restarted", self, "_on_tracker_restarted")
 	Events.connect("mode_changed", self, "_on_mode_changed")
 
 func _input(event: InputEvent) -> void:
@@ -34,6 +35,9 @@ func add_hidden(node: Node) -> void:
 		if is_instance_valid(to_delete):
 			to_delete.queue_free()
 	Events.emit_signal("entrances_changed", -1)
+
+func _on_tracker_restarted() -> void:
+	nodes_hidden.clear()
 
 func _on_mode_changed(new_mode: int) -> void:
 	mode = new_mode

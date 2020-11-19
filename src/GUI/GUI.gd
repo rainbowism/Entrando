@@ -78,6 +78,7 @@ func menu_pressed(id: int) -> void:
 			Events.emit_signal("load_file_clicked")
 		MENU_RESET:
 			get_tree().reload_current_scene()
+			Events.emit_signal("tracker_restarted")
 
 func _on_notes_entered(node: Node) -> void:
 	if tooltip.visible:
