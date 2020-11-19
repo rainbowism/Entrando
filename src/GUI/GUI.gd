@@ -13,9 +13,12 @@ enum {
 
 onready var menu = $PopupMenu
 onready var tooltip = $TooltipPopup
+onready var tooltip_container = $TooltipPopup/Margin/Container
 onready var tooltip_timer = $TooltipPopup/Timer
 onready var notes_modal = $Container/Notes/Shadow
 onready var notes_container = $Container/Notes/Shadow/Container/BG
+
+var last_hovered: MarginContainer
 
 func _ready() -> void:
 	Events.connect("notes_clicked", self, "open_notes")
@@ -30,8 +33,9 @@ func _ready() -> void:
 	menu.add_check_item("Drag n' Drop Markers", MENU_DRAG_N_DROP)
 	menu.add_item("Hide OW Item Markers", MENU_OW_ITEMS)
 
+	tooltip_timer.connect("timeout", self, "_on_tooltip_timeout")
+
 	for child in get_tree().get_nodes_in_group(Util.GROUP_NOTES):
-		print(child.name)
 		child.connect("mouse_entered", self, "_on_notes_entered", [child])
 		child.connect("mouse_exited", self, "_on_notes_exited")
 
@@ -76,16 +80,27 @@ func menu_pressed(id: int) -> void:
 			get_tree().reload_current_scene()
 
 func _on_notes_entered(node: Node) -> void:
-	print("hello")
-	for item in node.notes_tab.item_container.get_children():
+	if tooltip.visible:
+		return
+	last_hovered = node
+	tooltip_timer.start()
+
+func _on_tooltip_timeout() -> void:
+	var items = last_hovered.notes_tab.item_container.get_children()
+	if len(items) == 0:
+		return
+	for item in items:
 		var sprite = TextureRect.new()
 		sprite.texture = item.icons.get_child(0).texture
-		tooltip.add_child(sprite)
+		tooltip_container.add_child(sprite)
+		sprite.expand = true
+		sprite.rect_min_size = Vector2(22, 22)
 	tooltip.popup()
+	tooltip.rect_size = Vector2.ZERO
 	tooltip.rect_global_position = get_global_mouse_position() - tooltip.rect_size
 
 func _on_notes_exited() -> void:
-	print("hello")
+	tooltip_timer.stop()
 	tooltip.hide()
-	for child in tooltip.get_children():
+	for child in tooltip_container.get_children():
 		child.queue_free()
