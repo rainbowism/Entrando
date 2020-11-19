@@ -26,6 +26,12 @@ func _notification(what: int) -> void:
 		$GUILayer/Quit.show()
 		$GUILayer/Quit/Confirmation.popup()
 
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("save"):
+		open_save_dialog()
+	elif event.is_action_pressed("load"):
+		open_load_dialog()
+
 func _on_confirmed() -> void:
 	get_tree().quit()
 

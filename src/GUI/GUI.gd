@@ -26,8 +26,8 @@ func _ready() -> void:
 
 	menu.add_item("!!RESET!!", MENU_RESET)
 	menu.add_separator()
-	menu.add_item("Save", MENU_SAVE_FILE)
-	menu.add_item("Load", MENU_LOAD_FILE)
+	menu.add_item("Save", MENU_SAVE_FILE, KEY_S | KEY_MASK_CTRL)
+	menu.add_item("Load", MENU_LOAD_FILE, KEY_O | KEY_MASK_CTRL)
 	menu.add_separator()
 	menu.add_check_item("Show Remaining Entrances", MENU_REMAINING_ENTRANCES)
 	menu.add_check_item("Drag n' Drop Markers", MENU_DRAG_N_DROP)

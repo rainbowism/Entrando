@@ -19,7 +19,7 @@ func _ready() -> void:
 	Events.connect("tracker_restarted", self, "_on_tracker_restarted")
 	Events.connect("mode_changed", self, "_on_mode_changed")
 
-func _input(event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("undo") \
 		and len(nodes_hidden) > 0:
 		var node = nodes_hidden[len(nodes_hidden) - 1]
