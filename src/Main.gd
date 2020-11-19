@@ -9,7 +9,6 @@ func _ready() -> void:
 	$GUILayer/Quit.hide()
 	$GUILayer/Quit/Confirmation.connect("confirmed", self, "_on_confirmed")
 	$GUILayer/Quit/Confirmation.connect("popup_hide", self, "_on_cancelled")
-#	$GUILayer/Quit/Confirmation.get_cancel().connect("pressed", self, "_on_cancelled")
 	$GUILayer/Quit/Confirmation.get_ok().text = "YES."
 	$GUILayer/Quit/Confirmation.get_cancel().text = "NO."
 	$GUILayer/FileDialog/Dialog.connect("popup_hide", self, "_on_cancelled")

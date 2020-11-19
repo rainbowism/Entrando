@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=2]
+[gd_scene load_steps=82 format=2]
 
 [ext_resource path="res://src/GUI/MarkerButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/GUI/GUI.gd" type="Script" id=2]
@@ -73,7 +73,10 @@
 [ext_resource path="res://assets/font/PressStart2P-12.tres" type="DynamicFont" id=71]
 [ext_resource path="res://src/GUI/EntranceCounter.gd" type="Script" id=72]
 [ext_resource path="res://src/GUI/Notes.gd" type="Script" id=73]
+[ext_resource path="res://assets/icons/items/mearl.png" type="Texture" id=74]
 [ext_resource path="res://assets/icons/items/byrna_cape.png" type="Texture" id=75]
+[ext_resource path="res://assets/icons/items/sword.png" type="Texture" id=76]
+[ext_resource path="res://assets/icons/items/mirror.png" type="Texture" id=77]
 [ext_resource path="res://assets/icons/dungeons/tr.png" type="Texture" id=81]
 [ext_resource path="res://assets/icons/dungeons/dp.png" type="Texture" id=82]
 [ext_resource path="res://src/GUI/NotesButton.tscn" type="PackedScene" id=83]
@@ -169,11 +172,20 @@ margin_bottom = 44.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="Sanctuary" parent="Container/Margin/HBoxContainer/Rows/1" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 44.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 15 )
+connector = "hc"
+
 [node name="HCW" parent="Container/Margin/HBoxContainer/Rows/1" instance=ExtResource( 1 )]
 modulate = Color( 0.678431, 0.380392, 0.235294, 1 )
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 44.0
+margin_left = 48.0
+margin_right = 92.0
 margin_bottom = 44.0
 texture_normal = ExtResource( 49 )
 connector = "hc"
@@ -183,8 +195,8 @@ line_color = Color( 1, 1, 1, 1 )
 modulate = Color( 0.678431, 0.380392, 0.235294, 1 )
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 48.0
-margin_right = 92.0
+margin_left = 96.0
+margin_right = 140.0
 margin_bottom = 44.0
 texture_normal = ExtResource( 50 )
 connector = "hc"
@@ -194,8 +206,8 @@ line_color = Color( 1, 1, 1, 1 )
 modulate = Color( 0.678431, 0.380392, 0.235294, 1 )
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 96.0
-margin_right = 140.0
+margin_left = 144.0
+margin_right = 188.0
 margin_bottom = 44.0
 texture_normal = ExtResource( 51 )
 connector = "hc"
@@ -205,8 +217,8 @@ line_color = Color( 1, 1, 1, 1 )
 modulate = Color( 0.627451, 0.25098, 0.905882, 1 )
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 144.0
-margin_right = 188.0
+margin_left = 192.0
+margin_right = 236.0
 margin_bottom = 44.0
 texture_normal = ExtResource( 52 )
 connector = "ep"
@@ -216,8 +228,8 @@ line_color = Color( 1, 1, 1, 1 )
 modulate = Color( 1, 0, 0, 1 )
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 192.0
-margin_right = 236.0
+margin_left = 240.0
+margin_right = 284.0
 margin_bottom = 44.0
 texture_normal = ExtResource( 53 )
 connector = "dp"
@@ -227,8 +239,8 @@ line_color = Color( 1, 1, 1, 1 )
 modulate = Color( 1, 0, 0, 1 )
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 240.0
-margin_right = 284.0
+margin_left = 288.0
+margin_right = 332.0
 margin_bottom = 44.0
 texture_normal = ExtResource( 54 )
 connector = "dp"
@@ -238,8 +250,8 @@ line_color = Color( 1, 1, 1, 1 )
 modulate = Color( 1, 0, 0, 1 )
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 288.0
-margin_right = 332.0
+margin_left = 336.0
+margin_right = 380.0
 margin_bottom = 44.0
 texture_normal = ExtResource( 55 )
 connector = "dp"
@@ -249,8 +261,8 @@ line_color = Color( 1, 1, 1, 1 )
 modulate = Color( 1, 0, 0, 1 )
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 336.0
-margin_right = 380.0
+margin_left = 384.0
+margin_right = 428.0
 margin_bottom = 44.0
 texture_normal = ExtResource( 56 )
 connector = "dp"
@@ -260,8 +272,8 @@ line_color = Color( 1, 1, 1, 1 )
 modulate = Color( 1, 0.556863, 0.839216, 1 )
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 384.0
-margin_right = 428.0
+margin_left = 432.0
+margin_right = 476.0
 margin_bottom = 44.0
 texture_normal = ExtResource( 57 )
 connector = "th"
@@ -271,8 +283,8 @@ line_color = Color( 1, 1, 1, 1 )
 modulate = Color( 1, 0.647059, 0, 1 )
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 432.0
-margin_right = 476.0
+margin_left = 480.0
+margin_right = 524.0
 margin_bottom = 44.0
 texture_normal = ExtResource( 58 )
 connector = "at"
@@ -282,8 +294,8 @@ line_color = Color( 1, 1, 1, 1 )
 modulate = Color( 1, 1, 0, 1 )
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 480.0
-margin_right = 524.0
+margin_left = 528.0
+margin_right = 572.0
 margin_bottom = 44.0
 texture_normal = ExtResource( 59 )
 connector = "pd"
@@ -293,8 +305,8 @@ line_color = Color( 1, 1, 1, 1 )
 modulate = Color( 0.105882, 0.937255, 1, 1 )
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 528.0
-margin_right = 572.0
+margin_left = 576.0
+margin_right = 620.0
 margin_bottom = 44.0
 texture_normal = ExtResource( 60 )
 connector = "sp"
@@ -304,8 +316,8 @@ line_color = Color( 1, 1, 1, 1 )
 modulate = Color( 0.419608, 0.831373, 0.419608, 1 )
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 576.0
-margin_right = 620.0
+margin_left = 624.0
+margin_right = 668.0
 margin_bottom = 44.0
 texture_normal = ExtResource( 61 )
 connector = "sw"
@@ -315,8 +327,8 @@ line_color = Color( 1, 1, 1, 1 )
 modulate = Color( 1, 0, 1, 1 )
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 624.0
-margin_right = 668.0
+margin_left = 672.0
+margin_right = 716.0
 margin_bottom = 44.0
 texture_normal = ExtResource( 62 )
 connector = "tt"
@@ -326,8 +338,8 @@ line_color = Color( 1, 1, 1, 1 )
 modulate = Color( 0.392157, 0.65098, 0.929412, 1 )
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 672.0
-margin_right = 716.0
+margin_left = 720.0
+margin_right = 764.0
 margin_bottom = 44.0
 texture_normal = ExtResource( 63 )
 connector = "ip"
@@ -337,8 +349,8 @@ line_color = Color( 1, 1, 1, 1 )
 modulate = Color( 0, 1, 0, 1 )
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 720.0
-margin_right = 764.0
+margin_left = 768.0
+margin_right = 812.0
 margin_bottom = 44.0
 texture_normal = ExtResource( 64 )
 connector = "mm"
@@ -348,8 +360,8 @@ line_color = Color( 1, 1, 1, 1 )
 modulate = Color( 1, 0.894118, 0.768627, 1 )
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 768.0
-margin_right = 812.0
+margin_left = 816.0
+margin_right = 860.0
 margin_bottom = 44.0
 texture_normal = ExtResource( 65 )
 connector = "tr"
@@ -359,8 +371,8 @@ line_color = Color( 1, 1, 1, 1 )
 modulate = Color( 1, 0.894118, 0.768627, 1 )
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 816.0
-margin_right = 860.0
+margin_left = 864.0
+margin_right = 908.0
 margin_bottom = 44.0
 texture_normal = ExtResource( 66 )
 connector = "tr"
@@ -370,8 +382,8 @@ line_color = Color( 1, 1, 1, 1 )
 modulate = Color( 1, 0.894118, 0.768627, 1 )
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 864.0
-margin_right = 908.0
+margin_left = 912.0
+margin_right = 956.0
 margin_bottom = 44.0
 texture_normal = ExtResource( 67 )
 connector = "tr"
@@ -381,8 +393,8 @@ line_color = Color( 1, 1, 1, 1 )
 modulate = Color( 1, 0.894118, 0.768627, 1 )
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 912.0
-margin_right = 956.0
+margin_left = 960.0
+margin_right = 1004.0
 margin_bottom = 44.0
 texture_normal = ExtResource( 30 )
 connector = "tr"
@@ -392,8 +404,8 @@ line_color = Color( 1, 1, 1, 1 )
 modulate = Color( 0.501961, 0, 0, 1 )
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 960.0
-margin_right = 1004.0
+margin_left = 1008.0
+margin_right = 1052.0
 margin_bottom = 44.0
 texture_normal = ExtResource( 31 )
 connector = "gt"
@@ -402,8 +414,8 @@ line_color = Color( 1, 1, 1, 1 )
 [node name="Ganon" parent="Container/Margin/HBoxContainer/Rows/1" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 1008.0
-margin_right = 1052.0
+margin_left = 1056.0
+margin_right = 1100.0
 margin_bottom = 44.0
 texture_normal = ExtResource( 32 )
 connector = "ganon"
@@ -415,127 +427,10 @@ margin_bottom = 91.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Hammer" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 44.0
-margin_bottom = 45.0
-texture_normal = ExtResource( 35 )
-connector = "hammer"
-
-[node name="FireRod" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 48.0
-margin_right = 92.0
-margin_bottom = 45.0
-texture_normal = ExtResource( 37 )
-connector = "fire_rod"
-
-[node name="Lamp" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 96.0
-margin_right = 140.0
-margin_bottom = 45.0
-texture_normal = ExtResource( 39 )
-connector = "lamp"
-
-[node name="Somaria" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 144.0
-margin_right = 188.0
-margin_bottom = 45.0
-texture_normal = ExtResource( 42 )
-connector = "somaria"
-
-[node name="Powder" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 192.0
-margin_right = 236.0
-margin_bottom = 45.0
-texture_normal = ExtResource( 43 )
-connector = "powder"
-
-[node name="Bow" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 240.0
-margin_right = 284.0
-margin_bottom = 45.0
-texture_normal = ExtResource( 45 )
-connector = "bow"
-
-[node name="Gloves" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 288.0
-margin_right = 332.0
-margin_bottom = 45.0
-texture_normal = ExtResource( 47 )
-connector = "gloves"
-
-[node name="Key" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 336.0
-margin_right = 380.0
-margin_bottom = 45.0
-texture_normal = ExtResource( 34 )
-connector = "key"
-
-[node name="MountainFront" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 384.0
-margin_right = 428.0
-margin_bottom = 45.0
-texture_normal = ExtResource( 13 )
-connector = "mountain"
-
-[node name="OldManU" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 432.0
-margin_right = 476.0
-margin_bottom = 45.0
-texture_normal = ExtResource( 5 )
-connector = "oldman"
-
-[node name="SuperBunnyU" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 480.0
-margin_right = 524.0
-margin_bottom = 45.0
-texture_normal = ExtResource( 11 )
-connector = "bunny"
-
-[node name="BumperU" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 528.0
-margin_right = 572.0
-margin_bottom = 45.0
-texture_normal = ExtResource( 18 )
-connector = "bumper"
-
-[node name="SpiralU" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 576.0
-margin_right = 620.0
-margin_bottom = 45.0
-texture_normal = ExtResource( 25 )
-connector = "spiral"
-
 [node name="SpecU" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 624.0
-margin_right = 668.0
+margin_right = 44.0
 margin_bottom = 45.0
 texture_normal = ExtResource( 3 )
 connector = "spec"
@@ -543,8 +438,8 @@ connector = "spec"
 [node name="SpecM" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 672.0
-margin_right = 716.0
+margin_left = 48.0
+margin_right = 92.0
 margin_bottom = 45.0
 texture_normal = ExtResource( 8 )
 connector = "spec"
@@ -552,44 +447,80 @@ connector = "spec"
 [node name="SpecL" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 720.0
-margin_right = 764.0
+margin_left = 96.0
+margin_right = 140.0
 margin_bottom = 45.0
 texture_normal = ExtResource( 9 )
 connector = "spec"
 
-[node name="Sanctuary" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+[node name="MountainFront" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 768.0
-margin_right = 812.0
+margin_left = 144.0
+margin_right = 188.0
 margin_bottom = 45.0
-texture_normal = ExtResource( 15 )
-connector = "sanctuary"
+texture_normal = ExtResource( 13 )
+connector = "mountain"
 
-[node name="Brother" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+[node name="OldManU" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 816.0
-margin_right = 860.0
+margin_left = 192.0
+margin_right = 236.0
 margin_bottom = 45.0
-texture_normal = ExtResource( 16 )
-connector = "brother"
+texture_normal = ExtResource( 5 )
+connector = "oldman"
+
+[node name="SuperBunnyU" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 240.0
+margin_right = 284.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 11 )
+connector = "bunny"
+
+[node name="BumperU" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 288.0
+margin_right = 332.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 18 )
+connector = "bumper"
+
+[node name="SpiralU" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 336.0
+margin_right = 380.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 25 )
+connector = "spiral"
 
 [node name="FairyAscension" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 864.0
-margin_right = 908.0
+margin_left = 384.0
+margin_right = 428.0
 margin_bottom = 45.0
 texture_normal = ExtResource( 20 )
 connector = "fairy"
 
+[node name="Brother" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 432.0
+margin_right = 476.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 16 )
+connector = "brother"
+
 [node name="SickKid" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 912.0
-margin_right = 956.0
+margin_left = 480.0
+margin_right = 524.0
 margin_bottom = 45.0
 texture_normal = ExtResource( 21 )
 connector = "sick_kid"
@@ -597,8 +528,8 @@ connector = "sick_kid"
 [node name="PotionShop" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 960.0
-margin_right = 1004.0
+margin_left = 528.0
+margin_right = 572.0
 margin_bottom = 45.0
 texture_normal = ExtResource( 23 )
 connector = "potion_shop"
@@ -606,11 +537,101 @@ connector = "potion_shop"
 [node name="Spike" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 1008.0
-margin_right = 1052.0
+margin_left = 576.0
+margin_right = 620.0
 margin_bottom = 45.0
 texture_normal = ExtResource( 29 )
 connector = "spike"
+
+[node name="Sword" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 624.0
+margin_right = 668.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 76 )
+connector = "sword"
+
+[node name="Mirror" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 672.0
+margin_right = 716.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 77 )
+connector = "mirror"
+
+[node name="Hammer2" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 720.0
+margin_right = 764.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 35 )
+connector = "hammer"
+
+[node name="FireRod" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 768.0
+margin_right = 812.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 37 )
+connector = "fire_rod"
+
+[node name="Lamp" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 816.0
+margin_right = 860.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 39 )
+connector = "lamp"
+
+[node name="Somaria" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 864.0
+margin_right = 908.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 42 )
+connector = "somaria"
+
+[node name="Powder" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 912.0
+margin_right = 956.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 43 )
+connector = "powder"
+
+[node name="Bow" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 960.0
+margin_right = 1004.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 45 )
+connector = "bow"
+
+[node name="Gloves" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1008.0
+margin_right = 1052.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 47 )
+connector = "gloves"
+
+[node name="Key" parent="Container/Margin/HBoxContainer/Rows/2" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1056.0
+margin_right = 1100.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 34 )
+connector = "key"
 
 [node name="3" type="HBoxContainer" parent="Container/Margin/HBoxContainer/Rows"]
 margin_top = 93.0
@@ -619,126 +640,10 @@ margin_bottom = 138.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Hookshot" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 44.0
-margin_bottom = 45.0
-texture_normal = ExtResource( 36 )
-connector = "hookshot"
-
-[node name="IceRod" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 48.0
-margin_right = 92.0
-margin_bottom = 45.0
-texture_normal = ExtResource( 38 )
-connector = "ice_rod"
-
-[node name="Flippers" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 96.0
-margin_right = 140.0
-margin_bottom = 45.0
-texture_normal = ExtResource( 40 )
-connector = "flippers"
-
-[node name="ByrnaCape" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 144.0
-margin_right = 188.0
-margin_bottom = 45.0
-texture_normal = ExtResource( 75 )
-connector = "byrna_cape"
-
-[node name="Bombos" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 192.0
-margin_right = 236.0
-margin_bottom = 45.0
-texture_normal = ExtResource( 46 )
-connector = "bombos"
-
-[node name="Boots" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 240.0
-margin_right = 284.0
-margin_bottom = 45.0
-connector = "boots"
-
-[node name="Mitts" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 288.0
-margin_right = 332.0
-margin_bottom = 45.0
-texture_normal = ExtResource( 48 )
-connector = "mitts"
-
-[node name="BigKey" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 336.0
-margin_right = 380.0
-margin_bottom = 45.0
-texture_normal = ExtResource( 33 )
-connector = "big_key"
-
-[node name="MountainBack" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 384.0
-margin_right = 428.0
-margin_bottom = 45.0
-texture_normal = ExtResource( 14 )
-connector = "mountain"
-
-[node name="OldManL" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 432.0
-margin_right = 476.0
-margin_bottom = 45.0
-texture_normal = ExtResource( 12 )
-connector = "oldman"
-
-[node name="SuperBunnyL" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 480.0
-margin_right = 524.0
-margin_bottom = 45.0
-texture_normal = ExtResource( 10 )
-connector = "bunny"
-
-[node name="BumperL" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 528.0
-margin_right = 572.0
-margin_bottom = 45.0
-texture_normal = ExtResource( 19 )
-connector = "bumper"
-
-[node name="SpiralL" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 576.0
-margin_right = 620.0
-margin_bottom = 45.0
-texture_normal = ExtResource( 26 )
-connector = "spiral"
-
 [node name="ParadoxU" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 624.0
-margin_right = 668.0
+margin_right = 44.0
 margin_bottom = 45.0
 texture_normal = ExtResource( 6 )
 connector = "paradox"
@@ -746,8 +651,8 @@ connector = "paradox"
 [node name="ParadoxM" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 672.0
-margin_right = 716.0
+margin_left = 48.0
+margin_right = 92.0
 margin_bottom = 45.0
 texture_normal = ExtResource( 7 )
 connector = "paradox"
@@ -755,17 +660,71 @@ connector = "paradox"
 [node name="ParadoxL" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 720.0
-margin_right = 764.0
+margin_left = 96.0
+margin_right = 140.0
 margin_bottom = 45.0
 texture_normal = ExtResource( 4 )
 connector = "paradox"
 
+[node name="MountainBack" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 144.0
+margin_right = 188.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 14 )
+connector = "mountain"
+
+[node name="OldManL" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 192.0
+margin_right = 236.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 12 )
+connector = "oldman"
+
+[node name="SuperBunnyL" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 240.0
+margin_right = 284.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 10 )
+connector = "bunny"
+
+[node name="BumperL" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 288.0
+margin_right = 332.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 19 )
+connector = "bumper"
+
+[node name="SpiralL" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 336.0
+margin_right = 380.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 26 )
+connector = "spiral"
+
+[node name="KeeseCave" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 384.0
+margin_right = 428.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 27 )
+connector = "keese"
+
 [node name="Sriracha" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 768.0
-margin_right = 812.0
+margin_left = 432.0
+margin_right = 476.0
 margin_bottom = 45.0
 texture_normal = ExtResource( 24 )
 connector = "sriracha"
@@ -773,26 +732,17 @@ connector = "sriracha"
 [node name="Granny" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 816.0
-margin_right = 860.0
+margin_left = 480.0
+margin_right = 524.0
 margin_bottom = 45.0
 texture_normal = ExtResource( 17 )
 connector = "granny"
 
-[node name="KeeseCave" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 864.0
-margin_right = 908.0
-margin_bottom = 45.0
-texture_normal = ExtResource( 27 )
-connector = "keese"
-
 [node name="Smith" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 912.0
-margin_right = 956.0
+margin_left = 528.0
+margin_right = 572.0
 margin_bottom = 45.0
 texture_normal = ExtResource( 22 )
 connector = "smith"
@@ -800,8 +750,8 @@ connector = "smith"
 [node name="BombShop" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 960.0
-margin_right = 1004.0
+margin_left = 576.0
+margin_right = 620.0
 margin_bottom = 45.0
 texture_normal = ExtResource( 41 )
 connector = "big_bomb"
@@ -809,11 +759,91 @@ connector = "big_bomb"
 [node name="Library" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 1008.0
-margin_right = 1052.0
+margin_left = 624.0
+margin_right = 668.0
 margin_bottom = 45.0
 texture_normal = ExtResource( 28 )
 connector = "library"
+
+[node name="Mearl" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 672.0
+margin_right = 716.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 74 )
+connector = "mearl"
+
+[node name="Hookshot2" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 720.0
+margin_right = 764.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 36 )
+connector = "hookshot"
+
+[node name="IceRod" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 768.0
+margin_right = 812.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 38 )
+connector = "ice_rod"
+
+[node name="Bombos" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 816.0
+margin_right = 860.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 46 )
+connector = "bombos"
+
+[node name="ByrnaCape" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 864.0
+margin_right = 908.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 75 )
+connector = "byrna_cape"
+
+[node name="Flippers" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 912.0
+margin_right = 956.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 40 )
+connector = "flippers"
+
+[node name="Boots" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 960.0
+margin_right = 1004.0
+margin_bottom = 45.0
+connector = "boots"
+
+[node name="Mitts" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1008.0
+margin_right = 1052.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 48 )
+connector = "mitts"
+
+[node name="BigKey" parent="Container/Margin/HBoxContainer/Rows/3" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1056.0
+margin_right = 1100.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 33 )
+connector = "big_key"
 
 [node name="NotesButtons" type="VBoxContainer" parent="Container/Margin"]
 margin_left = 1170.0
@@ -877,6 +907,8 @@ custom_constants/separation = 7
 visible = false
 margin_top = 16.0
 margin_bottom = 28.0
+rect_min_size = Vector2( 60, 0 )
+align = 1
 script = ExtResource( 72 )
 
 [node name="PD" parent="Container/Margin/NotesButtons/2" instance=ExtResource( 83 )]

@@ -40,6 +40,9 @@ export(String,
 	"library",
 
 	# items
+	"sword",
+	"mirror",
+	"mearl",
 	"hammer",
 	"hookshot",
 	"lamp",
