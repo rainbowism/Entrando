@@ -31,7 +31,8 @@ func add_hidden(node: Node) -> void:
 	if len(nodes_hidden) > 10:
 		var to_delete = nodes_hidden[0]
 		nodes_hidden.erase(to_delete)
-		to_delete.queue_free()
+		if is_instance_valid(to_delete):
+			to_delete.queue_free()
 	Events.emit_signal("entrances_changed", -1)
 
 func _on_mode_changed(new_mode: int) -> void:
