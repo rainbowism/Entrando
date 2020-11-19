@@ -6,7 +6,10 @@ var is_connector: bool = false
 var is_hovering: bool = false
 var sprite_path: String setget set_sprite_path, get_sprite_path
 
-onready var sprite: Sprite = $Sprite
+var sprite: Sprite
+
+func init() -> void:
+	sprite = $Sprite
 
 func _ready() -> void:
 	connect("mouse_entered", self, "_on_mouse_entered")

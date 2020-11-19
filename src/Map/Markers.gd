@@ -20,8 +20,10 @@ func load_data(children: Array) -> void:
 	var marker_scene: PackedScene = load("res://src/Objects/Marker.tscn")
 	for data in children:
 		var node = marker_scene.instance()
+		node.init()
 		node.sprite_path = data.sprite_path
 		node.connector = data.connector
 		node.is_connector = data.is_connector
+		node.is_following = false
 		add_child(node)
 		node.position = Vector2(data.x, data.y)
