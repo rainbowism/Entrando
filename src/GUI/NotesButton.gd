@@ -1,4 +1,4 @@
-extends Control
+extends MarginContainer
 
 var current_checks: int setget set_current_checks
 export var total_checks: int setget set_total_checks
@@ -12,7 +12,7 @@ onready var label: Label = $Label
 
 func _ready() -> void:
 	update_label()
-#	$Texture.texture_normal = icon
+	add_to_group(Util.GROUP_NOTES)
 	$Texture.texture = icon
 	notes_tab = notes_tab_scene.instance()
 	notes_tab.attach_notes(self)
@@ -29,6 +29,36 @@ func _gui_input(event: InputEvent) -> void:
 			if current_checks > total_checks:
 				current_checks = total_checks
 			set_current_checks(current_checks)
+
+func save_data() -> Dictionary:
+	var data = {
+		"current_checks": current_checks,
+		"total_checks": total_checks,
+		"notes": notes_tab.text,
+		"paths": []
+	}
+
+	for item in notes_tab.item_container.get_children():
+		var path = []
+		for icon_node in item.icons.get_children():
+			path.append(icon_node.texture.resource_path)
+		data.paths.append(path)
+
+	return data
+
+func load_data(data: Dictionary) -> void:
+	current_checks = data.current_checks
+	notes_tab.current_slider.value = current_checks
+	total_checks = data.total_checks
+	notes_tab.total_slider.value = total_checks
+	notes_tab.text = data.notes
+	for child in notes_tab.item_container.get_children():
+		child.queue_free()
+	for path in data.paths:
+		var item_note = add_item_note(load(path[0]))
+		for i in range(1, len(path)):
+			item_note.add_arrow(load(path[i]))
+	update_label()
 
 func update_label() -> void:
 	label.text = "%d/%d" % [current_checks, total_checks]
@@ -63,6 +93,11 @@ func _on_marker_clicked(texture: Texture, _color: Color, _connector: String) -> 
 	if !notes_tab.is_inside_tree():
 		return
 
+	add_item_note(texture)
+
+func add_item_note(texture: Texture) -> HBoxContainer:
 	var item_note = item_note_scene.instance()
-	notes_tab.item_container.add_child(item_note)
+	item_note.init()
 	item_note.set_item(texture)
+	notes_tab.item_container.add_child(item_note)
+	return item_note

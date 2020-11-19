@@ -815,7 +815,7 @@ margin_bottom = 45.0
 texture_normal = ExtResource( 28 )
 connector = "library"
 
-[node name="Rows" type="VBoxContainer" parent="Container/Margin"]
+[node name="NotesButtons" type="VBoxContainer" parent="Container/Margin"]
 margin_left = 1170.0
 margin_top = 2.0
 margin_right = 1498.0
@@ -824,48 +824,48 @@ size_flags_horizontal = 8
 size_flags_vertical = 8
 custom_constants/separation = 3
 
-[node name="1" type="HBoxContainer" parent="Container/Margin/Rows"]
+[node name="1" type="HBoxContainer" parent="Container/Margin/NotesButtons"]
 margin_left = 16.0
 margin_right = 328.0
 margin_bottom = 44.0
 size_flags_horizontal = 8
 custom_constants/separation = 7
 
-[node name="Map" type="TextureRect" parent="Container/Margin/Rows/1"]
+[node name="Map" type="TextureRect" parent="Container/Margin/NotesButtons/1"]
 margin_right = 44.0
 margin_bottom = 44.0
 texture = ExtResource( 69 )
 script = ExtResource( 70 )
 
-[node name="EP" parent="Container/Margin/Rows/1" instance=ExtResource( 83 )]
+[node name="EP" parent="Container/Margin/NotesButtons/1" instance=ExtResource( 83 )]
 modulate = Color( 0.627451, 0.25098, 0.905882, 1 )
 margin_left = 51.0
 margin_right = 111.0
 total_checks = 6
 icon = ExtResource( 52 )
 
-[node name="DP" parent="Container/Margin/Rows/1" instance=ExtResource( 83 )]
+[node name="DP" parent="Container/Margin/NotesButtons/1" instance=ExtResource( 83 )]
 modulate = Color( 1, 0, 0, 1 )
 margin_left = 118.0
 margin_right = 178.0
 total_checks = 6
 icon = ExtResource( 82 )
 
-[node name="TH" parent="Container/Margin/Rows/1" instance=ExtResource( 83 )]
+[node name="TH" parent="Container/Margin/NotesButtons/1" instance=ExtResource( 83 )]
 modulate = Color( 1, 0.556863, 0.839216, 1 )
 margin_left = 185.0
 margin_right = 245.0
 total_checks = 6
 icon = ExtResource( 57 )
 
-[node name="AT" parent="Container/Margin/Rows/1" instance=ExtResource( 83 )]
+[node name="AT" parent="Container/Margin/NotesButtons/1" instance=ExtResource( 83 )]
 modulate = Color( 1, 0.647059, 0, 1 )
 margin_left = 252.0
 margin_right = 312.0
 total_checks = 2
 icon = ExtResource( 58 )
 
-[node name="2" type="HBoxContainer" parent="Container/Margin/Rows"]
+[node name="2" type="HBoxContainer" parent="Container/Margin/NotesButtons"]
 margin_left = 67.0
 margin_top = 47.0
 margin_right = 328.0
@@ -873,72 +873,72 @@ margin_bottom = 91.0
 size_flags_horizontal = 8
 custom_constants/separation = 7
 
-[node name="EntranceCounter" type="Label" parent="Container/Margin/Rows/2"]
+[node name="EntranceCounter" type="Label" parent="Container/Margin/NotesButtons/2"]
 visible = false
 margin_top = 16.0
 margin_bottom = 28.0
 script = ExtResource( 72 )
 
-[node name="PD" parent="Container/Margin/Rows/2" instance=ExtResource( 83 )]
+[node name="PD" parent="Container/Margin/NotesButtons/2" instance=ExtResource( 83 )]
 modulate = Color( 1, 1, 0, 1 )
 total_checks = 14
 icon = ExtResource( 59 )
 
-[node name="SP" parent="Container/Margin/Rows/2" instance=ExtResource( 83 )]
+[node name="SP" parent="Container/Margin/NotesButtons/2" instance=ExtResource( 83 )]
 modulate = Color( 0.105882, 0.937255, 1, 1 )
 margin_left = 67.0
 margin_right = 127.0
 total_checks = 10
 icon = ExtResource( 60 )
 
-[node name="SW" parent="Container/Margin/Rows/2" instance=ExtResource( 83 )]
+[node name="SW" parent="Container/Margin/NotesButtons/2" instance=ExtResource( 83 )]
 modulate = Color( 0.419608, 0.831373, 0.419608, 1 )
 margin_left = 134.0
 margin_right = 194.0
 total_checks = 8
 icon = ExtResource( 61 )
 
-[node name="TT" parent="Container/Margin/Rows/2" instance=ExtResource( 83 )]
+[node name="TT" parent="Container/Margin/NotesButtons/2" instance=ExtResource( 83 )]
 modulate = Color( 1, 0, 1, 1 )
 margin_left = 201.0
 margin_right = 261.0
 total_checks = 8
 icon = ExtResource( 62 )
 
-[node name="3" type="HBoxContainer" parent="Container/Margin/Rows"]
+[node name="3" type="HBoxContainer" parent="Container/Margin/NotesButtons"]
 margin_top = 94.0
 margin_right = 328.0
 margin_bottom = 138.0
 size_flags_horizontal = 8
 custom_constants/separation = 7
 
-[node name="HC" parent="Container/Margin/Rows/3" instance=ExtResource( 83 )]
+[node name="HC" parent="Container/Margin/NotesButtons/3" instance=ExtResource( 83 )]
 modulate = Color( 0.678431, 0.380392, 0.235294, 1 )
 total_checks = 8
 icon = ExtResource( 68 )
 
-[node name="IP" parent="Container/Margin/Rows/3" instance=ExtResource( 83 )]
+[node name="IP" parent="Container/Margin/NotesButtons/3" instance=ExtResource( 83 )]
 modulate = Color( 0.392157, 0.65098, 0.929412, 1 )
 margin_left = 67.0
 margin_right = 127.0
 total_checks = 8
 icon = ExtResource( 63 )
 
-[node name="MM" parent="Container/Margin/Rows/3" instance=ExtResource( 83 )]
+[node name="MM" parent="Container/Margin/NotesButtons/3" instance=ExtResource( 83 )]
 modulate = Color( 0, 1, 0, 1 )
 margin_left = 134.0
 margin_right = 194.0
 total_checks = 8
 icon = ExtResource( 64 )
 
-[node name="TR" parent="Container/Margin/Rows/3" instance=ExtResource( 83 )]
+[node name="TR" parent="Container/Margin/NotesButtons/3" instance=ExtResource( 83 )]
 modulate = Color( 1, 0.894118, 0.768627, 1 )
 margin_left = 201.0
 margin_right = 261.0
 total_checks = 12
 icon = ExtResource( 81 )
 
-[node name="GT" parent="Container/Margin/Rows/3" instance=ExtResource( 83 )]
+[node name="GT" parent="Container/Margin/NotesButtons/3" instance=ExtResource( 83 )]
 modulate = Color( 0.501961, 0, 0, 1 )
 margin_left = 268.0
 margin_right = 328.0

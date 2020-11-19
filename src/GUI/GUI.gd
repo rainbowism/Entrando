@@ -4,7 +4,11 @@ enum {
 	MENU_OW_ITEMS = 0,
 	MENU_DRAG_N_DROP = 1,
 	MENU_REMAINING_ENTRANCES = 2,
-	MENU_RESET = 4
+	# 3 separator
+	MENU_SAVE_FILE = 4,
+	MENU_LOAD_FILE = 5,
+	# 6 separator
+	MENU_RESET = 7
 }
 
 onready var menu = $PopupMenu
@@ -19,7 +23,23 @@ func _ready() -> void:
 	menu.add_check_item("Drag n' Drop Markers", MENU_DRAG_N_DROP)
 	menu.add_check_item("Show Remaining Entrances", MENU_REMAINING_ENTRANCES)
 	menu.add_separator()
+	menu.add_item("Save", MENU_SAVE_FILE)
+	menu.add_item("Load", MENU_LOAD_FILE)
+	menu.add_separator()
 	menu.add_item("!!RESET!!", MENU_RESET)
+
+func save_data() -> Dictionary:
+	var data = {}
+	for child in get_tree().get_nodes_in_group(Util.GROUP_NOTES):
+		data[child.name] = child.save_data()
+	return data
+
+func load_data(data: Dictionary) -> void:
+	var nodes = {}
+	for child in get_tree().get_nodes_in_group(Util.GROUP_NOTES):
+		nodes[child.name] = child
+	for id in data:
+		nodes[id].load_data(data[id])
 
 func open_notes(node: Node) -> void:
 	for child in notes_container.get_children():
@@ -36,10 +56,14 @@ func menu_pressed(id: int) -> void:
 		menu.set_item_checked(id, !menu.is_item_checked(id))
 	match(id):
 		MENU_OW_ITEMS:
-			get_tree().call_group("item", "queue_free")
+			get_tree().call_group(Util.GROUP_ITEMS, "queue_free")
 		MENU_DRAG_N_DROP:
 			Util.drag_and_drop = menu.is_item_checked(id)
 		MENU_REMAINING_ENTRANCES:
-			$"Container/Margin/Rows/2/EntranceCounter".visible = menu.is_item_checked(id)
+			$"Container/Margin/NotesButtons/2/EntranceCounter".visible = menu.is_item_checked(id)
+		MENU_SAVE_FILE:
+			Events.emit_signal("save_file_clicked")
+		MENU_LOAD_FILE:
+			Events.emit_signal("load_file_clicked")
 		MENU_RESET:
 			get_tree().reload_current_scene()

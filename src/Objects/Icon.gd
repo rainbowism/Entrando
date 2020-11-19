@@ -9,12 +9,12 @@ func _ready() -> void:
 
 	if is_item:
 		$Entrance.queue_free()
-		add_to_group("item")
+		add_to_group(Util.GROUP_ITEMS)
 		$Entrance.hide()
 		$Item.show()
 	else:
 		$Item.queue_free()
-		add_to_group("entrance")
+		add_to_group(Util.GROUP_ENTRANCES)
 		$Entrance.show()
 		$Item.hide()
 

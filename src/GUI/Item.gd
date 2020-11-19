@@ -15,8 +15,12 @@ extends HBoxContainer
 #	Color8(198,151,87)
 #])
 
-onready var arrow_icon_scene: PackedScene = preload("res://src/GUI/ArrowIcon.tscn")
-onready var icons: HBoxContainer = $Icons
+var arrow_icon_scene: PackedScene
+var icons: HBoxContainer
+
+func init() -> void:
+	arrow_icon_scene = load("res://src/GUI/ArrowIcon.tscn")
+	icons = $Icons
 
 func connect_children(node: Node) -> void:
 	for child in node.get_children():
@@ -30,7 +34,7 @@ func _ready() -> void:
 	connect_children($Compass)
 
 func set_item(texture: Texture) -> void:
-	$Icons/ItemIcon.texture_normal = texture
+	$Icons/ItemIcon.texture = texture
 
 func add_arrow(texture: Texture) -> void:
 	var arrow = arrow_icon_scene.instance()

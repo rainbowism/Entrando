@@ -4,14 +4,16 @@ var current_label: Label
 var current_slider: HSlider
 var total_label: Label
 var total_slider: HSlider
+var text: String setget set_notes_text, get_notes_text
 
-onready var item_container: VBoxContainer = $ItemsMargin/Paths/ScrollContainer/Items
+var item_container: VBoxContainer
 
 func _enter_tree() -> void:
 	total_label.text = "%d" % total_slider.value
 	current_label.text = "%d" % min(current_slider.value, total_slider.value)
 
 func attach_notes(parent: Node) -> void:
+	item_container = $ItemsMargin/Paths/ScrollContainer/Items
 	current_slider = $NotesMargin/VBoxContainer/Current/Slider
 	current_slider.value = parent.current_checks
 	current_slider.connect("value_changed", self, "_current_checks_changed")
@@ -30,3 +32,9 @@ func _current_checks_changed(_value: int) -> void:
 
 func _total_checks_changed(_value: int) -> void:
 	total_label.text = "%d" % total_slider.value
+
+func set_notes_text(value: String) -> void:
+	$"NotesMargin/VBoxContainer/NotesEdit".text = value
+
+func get_notes_text() -> String:
+	return $"NotesMargin/VBoxContainer/NotesEdit".text

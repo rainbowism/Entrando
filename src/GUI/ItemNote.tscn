@@ -126,11 +126,11 @@ size_flags_horizontal = 2
 size_flags_vertical = 3
 custom_constants/separation = 1
 
-[node name="ItemIcon" type="TextureButton" parent="Icons"]
+[node name="ItemIcon" type="TextureRect" parent="Icons"]
 margin_top = 12.0
 margin_right = 44.0
 margin_bottom = 56.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture_normal = ExtResource( 5 )
+texture = ExtResource( 5 )
 stretch_mode = 6

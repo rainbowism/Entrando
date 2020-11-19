@@ -1,6 +1,12 @@
 extends Node
 
 enum {MODE_OW, MODE_DUNGEON}
+
+const GROUP_MARKER = "markers"
+const GROUP_ITEMS = "items"
+const GROUP_ENTRANCES = "entrances"
+const GROUP_NOTES = "notes_buttons"
+
 var mode: int = MODE_OW
 # only shows entrances, and not OW items
 var andy_mode: bool = false
