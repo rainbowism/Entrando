@@ -9,6 +9,7 @@ func save_data() -> Array:
 			"sprite_path": child.sprite_path,
 			"connector": child.connector,
 			"is_connector": child.is_connector,
+			"color": child.modulate.to_html(false),
 			"x": child.position.x,
 			"y": child.position.y
 		})
@@ -22,8 +23,12 @@ func load_data(children: Array) -> void:
 		var node = marker_scene.instance()
 		node.init()
 		node.sprite_path = data.sprite_path
-		node.connector = data.connector
-		node.is_connector = data.is_connector
+		if data.connector != "":
+			node.add_to_group(data.connector)
+			node.connector = data.connector
+			node.is_connector = true
+		if 'color' in data:
+			node.modulate = Color(data.color)
 		node.is_following = false
 		add_child(node)
 		node.position = Vector2(data.x, data.y)
