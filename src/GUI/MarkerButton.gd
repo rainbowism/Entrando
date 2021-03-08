@@ -35,6 +35,7 @@ export(String,
 	"sriracha",
 	"spike",
 	"potion_shop",
+	"luck_fairy",
 	"smith",
 	"big_bomb",
 	"library",
@@ -58,7 +59,28 @@ export(String,
 	"boots",
 	"flippers",
 	"key",
-	"big_key"
+	"big_key",
+	
+	# entrances
+	"aginah",
+	"bonk_rocks",
+	"brewery",
+	"c_house",
+	"cave_45",
+	"checkerboard",
+	"chest_game",
+	"chicken_house",
+	"dam",
+	"graveyard_ledge",
+	"hammer_pegs",
+	"kings_tomb",
+	"mire shed",
+	"pyramid fairy",
+	"waterfall fairy",
+	"mini moldorm",
+	"hype cave",
+	"blinds house",
+	"mimic cave"
 ) var connector
 export(Color) var line_color: Color = Color.red
 var is_hovering: bool = false

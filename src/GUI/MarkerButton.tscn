@@ -1,13 +1,27 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/GUI/MarkerButton.gd" type="Script" id=1]
 [ext_resource path="res://assets/icons/items/boots.png" type="Texture" id=2]
+[ext_resource path="res://src/GUI/DisableButton.gd" type="Script" id=3]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/disabled.png-4a8e126ac0fd4b0817c4fee6e226cca5.stex"
 
 [node name="MarkerButton" type="TextureButton"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 1
 texture_normal = ExtResource( 2 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_right = 45.0
+margin_bottom = 45.0
+mouse_filter = 1
+button_mask = 2
+texture_disabled = SubResource( 1 )
+script = ExtResource( 3 )

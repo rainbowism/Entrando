@@ -3,6 +3,7 @@ extends MarginContainer
 var current_checks: int setget set_current_checks
 export var total_checks: int setget set_total_checks
 export var icon: Texture
+export var locked_total_checks: bool
 
 var notes_tab: HSplitContainer
 
@@ -31,11 +32,9 @@ func _gui_input(event: InputEvent) -> void:
 					current_checks = total_checks
 				set_current_checks(current_checks)
 			BUTTON_WHEEL_UP:
-				total_checks += 1
-				set_total_checks(total_checks)
+				set_total_checks(total_checks + 1)
 			BUTTON_WHEEL_DOWN:
-				total_checks -= 1
-				set_total_checks(total_checks)
+				set_total_checks(total_checks - 1)
 				if current_checks > total_checks:
 					current_checks = total_checks
 				set_current_checks(current_checks)
@@ -80,7 +79,9 @@ func set_current_checks(value: int) -> void:
 		update_label()
 
 func set_total_checks(value: int) -> void:
-	total_checks = value
+	if !locked_total_checks:
+		total_checks = value
+
 	if label:
 		update_label()
 
